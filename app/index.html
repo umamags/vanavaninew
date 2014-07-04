@@ -12,28 +12,28 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
   <link rel="stylesheet" href="css/app.css"/>
-  <link rel="stylesheet" type="text/css" href="css/master.css"/>
+  <link rel="stylesheet" href="css/master.css"/>
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
+<table><tr><td>
   <div ng-include="'partials/header.html'"></div>
-  <ul class="menu">
-    <li><a href="#/home">Home</a></li>
-    <li><a href="#/pta">PTA</a></li>
-    <li><a href="#/teachersList">Teachers List</a></li>
-    <li><a href="#/photoGallery">Photo Gallery</a></li>
-    <li><a href="#/videoGallery">Video Gallery</a></li>
-    <li><a href="#/showCase">ShowCase</a></li>
-    <li><a href="#/contactUs">Contact Us</a></li>
-    <li><a href="#/jobs">Jobs</a></li>
-    <li><a href="#/facebook">Facebook</a></li>
-  </ul>
+  <table><tr><td id="leftmenu">
+    <div ng-include="'partials/leftmenu.html'"></div>
+   </td><td>
+    <div ng-view></div>
+    </td><td id="rightmenu">
+  <div ng-include="'partials/rightmenu.html'"></div>
+</td></tr></table>
+  <div ng-include="'partials/footer.html'"></div>
+</td></tr></table>
+
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <div ng-view></div>
+  
 
   <div>Angular seed app: v<span app-version></span></div>
 
