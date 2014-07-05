@@ -1,7 +1,20 @@
 <div class="main_content">
 You are here: Home > Teachers List
 <hr>
-<table class="teachers_list maintable">
+    <div>
+      <!--Body content-->
+
+      <ul class="teachersList">
+        <li ng-repeat="teacher in teachers | filter:query | orderBy:orderProp"
+            class="thumbnail">
+            <span>{{teacher.sno}}</span>
+            <span>{{teacher.name}}</span>
+        </li>
+      </ul>
+
+    </div>
+
+<table class="teachers_list maintable" style="display:none">
 <tr>
 	<td>SNo</td>
 	<td>Name of staff</td>

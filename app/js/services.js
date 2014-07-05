@@ -1,9 +1,12 @@
 'use strict';
 
 /* Services */
+console.log("Mahesh in services.js 1");
+var vanavaniServices = angular.module('vanavaniServices', ['ngResource']);
 
-
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('myApp.services', []).
-  value('version', '0.1');
+vanavaniServices.factory('Teacher', ['$resource',
+  function($resource){
+    return $resource('jsondata/teachers.json', {}, {
+      query: {method:'GET', isArray:true}
+    });
+  }]);
