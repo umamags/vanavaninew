@@ -16,7 +16,7 @@ if ($handle = opendir($fromdir)) {
             $thisrow = array();
         	$row++;
         	$thisrow["sno"] = $row;
-        	$thisrow["filename"] = $fromdir . "/" . $file;
+        	$thisrow["filename"] = "images/" . $folderName . "/" . $file;
         	$results[] = $thisrow;
         }
     }

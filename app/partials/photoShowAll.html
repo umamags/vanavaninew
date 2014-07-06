@@ -1,8 +1,9 @@
 <div class="main_content">
-<table>
-    <tr ng-repeat="photo in photos"
-        class="thumbnail">
-        <td>{{photo.filename}}</td>
-    </tr>
-</table>
+    <span ng-repeat="photo in photos"
+        class="thumbnail">        
+        <img ng-src="{{photo.filename}}" />
+        <div ng-show="{{($index+1) % 4 == 0}}">
+        	<hr>
+        </div>
+    </span>
 </div>
