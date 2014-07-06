@@ -9,3 +9,10 @@ vanavaniServices.factory('Teacher', ['$resource',
       query: {method:'GET', isArray:true}
     });
   }]);
+
+vanavaniServices.factory('Photo', ['$resource',
+ function($resource){
+   return $resource('php/photoShowAll.php?folderName=:folderName', {}, {
+     query: {method:'GET', params:{folderName:'folderName'}, isArray:true}
+   });
+ }]);

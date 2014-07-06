@@ -9,6 +9,13 @@ vanavaniControllers.controller('teachersListCtrl', ['$scope', 'Teacher',
     $scope.orderProp = 'sno';
   }]);
 
+
+  vanavaniControllers.controller('photoShowAllCtrl', ['$scope', '$routeParams', 'Photo',
+     function($scope, $routeParams, Photo) {
+       $scope.photos = Photo.query({folderName: $routeParams.folderName}, function(photo) {
+       });
+     }]);
+
 vanavaniControllers.controller('homeCtrl', ['$scope',
                                                     function($scope) {
                                                     }]);

@@ -25,6 +25,7 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/goals', {templateUrl: 'partials/goals.html', controller: 'goalsCtrl'});
 	  $routeProvider.when('/howToSponsor', {templateUrl: 'partials/howToSponsor.html', controller: 'howToSponsorCtrl'});
 	  $routeProvider.when('/thankYou', {templateUrl: 'partials/thankYou.html', controller: 'thankYouCtrl'});
+	  $routeProvider.when('/photoShowAll/:folderName', {templateUrl: 'partials/photoShowAll.html', controller: 'photoShowAllCtrl'});
 	  $routeProvider.otherwise({redirectTo: '/home'});
   }]);
 
