@@ -183,6 +183,9 @@ table.maintable td.left {
 	text-align: left;
 	white-space: nowrap;
 }
+table.teachers_list {
+	margin-left: 10px;	
+}
 table.thank_you_table td,
 table.teachers_list td,
 table.photo_gallery td {
@@ -226,6 +229,8 @@ table.jobs tr.row1
 	background: #FAEBD7;
 	color: #841B2D;
 	font-weight: bold;
+	border: 5px solid #FFF9CC;
+	
 }
 table.jobs tr.row2 {
 	background: #FE6F5E;

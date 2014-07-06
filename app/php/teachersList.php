@@ -1,6 +1,6 @@
 <?PHP
 $data = array(
-  array('sno' => 1, 'name' => "GOBI.K", 'img' =>"images/teachers/01_gobi_k.jpg_medium.jpg", 'designation' => "PRINCIPAL", 'classes' => "IX,X", 'subject' => "ENGLISH", 'classes' => "HISTORY", 'doj' => "1-6-2011"),
+  array('sno' => 1, 'name' => "GOBI.K", 'img' =>"images/teachers/01_gobi_k.jpg_medium.jpg", 'designation' => "PRINCIPAL", 'classes' => "IX,X", 'subject' => "ENGLISH", 'doj' => "1-6-2011"),
   array('sno' => 2, 'name' => "MEENA .M", 'img' =>"images/teachers/02_meena_m.jpg_medium.jpg", 'designation' => "VP", 'classes' => "VIII-X", 'subject' => "MATHS", 'doj' => "12-7-2003"),
   array('sno' => 3, 'name' => "CHINTHAMANI .C", 'img' =>"images/teachers/03_chintamani_c.jpg_medium.jpg", 'designation' => "TAMIL TEACHER", 'classes' => "VIII-X", 'subject' => "TAMIL", 'doj' => "9-7-1993"),
   array('sno' => 4, 'name' => "KALIAMMAL.K", 'img' =>"images/teachers/04_kaliammal_k.jpg_medium.jpg", 'designation' => "GT", 'classes' => "VI-VIII", 'subject' => "SCIENCE", 'doj' => "12-7-2000"),

@@ -4,13 +4,25 @@ You are here: Home > Teachers List
     <div>
       <!--Body content-->
 
-      <ul class="teachersList">
-        <li ng-repeat="teacher in teachers | filter:query | orderBy:orderProp"
+      <table class="teachers_list maintable">
+        <tr>
+			<td>SNo</td>
+			<td>Name of staff</td>
+			<td>Image (click)</td>
+			<td>Designation / Class</td>
+			<td>Subject</td>
+			<td>Date of joining</td>
+		</tr>	
+        
+        <tr ng-repeat="teacher in teachers | filter:query | orderBy:orderProp"
             class="thumbnail">
-            <span>{{teacher.sno}}</span>
-            <span>{{teacher.name}}</span>
-            <span>{{teacher.img}}</span>
-        </li>
+            <td>{{teacher.sno}}</td>
+            <td>{{teacher.name}}</td>
+            <td><img ng-src="{{teacher.img}}" /></td>
+            <td>{{teacher.designation}} <br> {{teacher.classes}}</td>
+            <td>{{teacher.subject}}</td>
+            <td>{{teacher.doj}}</td>
+        </tr>
       </ul>
 
     </div>
