@@ -6,7 +6,7 @@ var vanavaniServices = angular.module('vanavaniServices', ['ngResource']);
 
 vanavaniServices.factory('Teacher', ['$resource',
   function($resource){
-    return $resource('jsondata/teachers.json', {}, {
+    return $resource('php/teachersList.php', {}, {
       query: {method:'GET', isArray:true}
     });
   }]);
