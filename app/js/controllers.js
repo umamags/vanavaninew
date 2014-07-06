@@ -36,3 +36,27 @@ vanavaniControllers.controller('contactUsCtrl', ['$scope',
 vanavaniControllers.controller('jobsCtrl', ['$scope',
                                             function($scope) {
                                             }]);
+vanavaniControllers.controller('trusteesCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('newsLetterCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('studentParticularsCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('feeStructureCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('feeConcessionDetailsCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('goalsCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('howToSponsorCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
+vanavaniControllers.controller('thankYouCtrl', ['$scope',
+                                            function($scope) {
+                                            }]);
