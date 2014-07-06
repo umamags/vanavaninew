@@ -1,7 +1,6 @@
 'use strict';
 
 /* Controllers */
-console.log("Mahesh in controllers.js 1");
 var vanavaniControllers = angular.module('vanavaniControllers', []);
 
 vanavaniControllers.controller('teachersListCtrl', ['$scope', 'Teacher',

@@ -1,7 +1,6 @@
 'use strict';
 
 /* App Module */
-console.log("Mahesh in app.js 1");
 var vanavaniApp = angular.module('vanavaniApp', [
   'ngRoute',
   'vanavaniControllers',

@@ -1,7 +1,6 @@
 'use strict';
 
 /* Services */
-console.log("Mahesh in services.js 1");
 var vanavaniServices = angular.module('vanavaniServices', ['ngResource']);
 
 vanavaniServices.factory('Teacher', ['$resource',
