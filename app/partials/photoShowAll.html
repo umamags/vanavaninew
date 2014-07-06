@@ -1,7 +1,7 @@
 <div class="main_content">
     <span ng-repeat="photo in photos"
         class="thumbnail">        
-        <img ng-src="{{photo.filename}}" />
+        <a href="#/photoDetail/{{photo.filename}}"><img ng-src="{{photo.filename}}" /></a>
         <div ng-show="{{($index+1) % 4 == 0}}">
         	<hr>
         </div>
