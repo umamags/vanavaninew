@@ -10,11 +10,21 @@ vanavaniControllers.controller('teachersListCtrl', ['$scope', 'Teacher',
   }]);
 
 
-  vanavaniControllers.controller('photoShowAllCtrl', ['$scope', '$routeParams', 'Photo',
+vanavaniControllers.controller('photoShowAllCtrl', ['$scope', '$routeParams', 'Photo',
      function($scope, $routeParams, Photo) {
        $scope.photos = Photo.query({folderName: $routeParams.folderName}, function(photo) {
        });
      }]);
+
+vanavaniControllers.controller('photoDetailCtrl', ['$scope', '$routeParams', 'Photo',
+       function($scope, $routeParams, Photo) {
+		  name = $routeParams.imageName;
+	      name = name.replace("_medium.jpg", "");
+		  name = name.replace("_medium.JPG", "");	    
+	
+		  $scope.folderName = $routeParams.folderName;
+		  $scope.imageName = name;
+       }]);
 
 vanavaniControllers.controller('homeCtrl', ['$scope',
                                                     function($scope) {

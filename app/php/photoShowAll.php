@@ -17,6 +17,7 @@ if ($handle = opendir($fromdir)) {
         	$row++;
         	$thisrow["sno"] = $row;
         	$thisrow["filename"] = "images/" . $folderName . "/" . $file;
+        	$thisrow["filenameEncoded"] = urlencode("images/" . $folderName . "/" . $file);
         	$results[] = $thisrow;
         }
     }
