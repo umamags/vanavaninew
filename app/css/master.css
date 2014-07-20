@@ -259,6 +259,10 @@ p.blue {
 p.yellow {
 	color: yellow;
 }
+table#newsletter td {
+	padding-left: 10px;
+}
 table#newsletter td.firstcol {
-	width: 90%;
+	width: 75%;
+	
 }
