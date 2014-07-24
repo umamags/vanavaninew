@@ -16,3 +16,10 @@ vanavaniServices.factory('Photo', ['$resource',
      query: {method:'GET', params:{folderName:'folderName'}, isArray:true}
    });
  }]);
+
+vanavaniServices.factory('GridData', ['$resource',
+   function($resource){
+     return $resource('jsondata/fedrouting.json', {}, {
+       query: {method:'GET', isArray:true}
+     });
+   }]);

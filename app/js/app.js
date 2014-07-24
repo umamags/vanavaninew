@@ -3,6 +3,7 @@
 /* App Module */
 var vanavaniApp = angular.module('vanavaniApp', [
   'ngRoute',
+  'ngGrid',
   'vanavaniControllers',
   'vanavaniFilters',
   'vanavaniServices'
@@ -27,6 +28,7 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/thankYou', {templateUrl: 'partials/thankYou.html', controller: 'thankYouCtrl'});
 	  $routeProvider.when('/photoShowAll/:folderName', {templateUrl: 'partials/photoShowAll.html', controller: 'photoShowAllCtrl'});
 	  $routeProvider.when('/photoDetail/images/:folderName/:imageName', {templateUrl: 'partials/photoDetail.html', controller: 'photoDetailCtrl'});
+	  $routeProvider.when('/nggrid-example', {templateUrl: 'partials/nggrid-example.html', controller: 'nggrid-exampleCtrl'});
 	  $routeProvider.otherwise({redirectTo: '/home'});
   }]);
 
