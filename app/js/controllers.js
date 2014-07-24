@@ -16,8 +16,8 @@ vanavaniControllers.controller('photoShowAllCtrl', ['$scope', '$routeParams', 'P
        });
      }]);
 
-vanavaniControllers.controller('photoDetailCtrl', ['$scope', '$routeParams', 'Photo',
-       function($scope, $routeParams, Photo) {
+vanavaniControllers.controller('photoDetailCtrl', ['$scope', '$routeParams',
+       function($scope, $routeParams) {
 		  name = $routeParams.imageName;
 	      name = name.replace("_medium.jpg", "");
 		  name = name.replace("_medium.JPG", "");	    
