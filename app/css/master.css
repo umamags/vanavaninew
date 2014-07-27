@@ -248,7 +248,9 @@ table.jobs tr.row2 {
 .showcaseheader {
 	font-weight: bold;
 	color: red;
-	border-top: 1px solid #000000;
+}
+td.showcaseArticle {
+	width: 500px;
 }
 p.red {
 	color: red;
