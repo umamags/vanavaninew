@@ -33,6 +33,12 @@ table.header1 {
 table.header2 {
 	background: #F2F3F4;	
 }
+
+.schoolName {
+	color: blue;
+	font-weight: bold;
+}
+
 table.header1 td.col1 {
 	padding-right: 250px;
 	color: blue;
