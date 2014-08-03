@@ -204,8 +204,17 @@ table.teachers_list td {
 table.teachers_list img {
 	width: 250px;
 }
+/* bootstrap related styles */
+.teachersList {
+	background: #F2F3F4;
+}
+.mainbody {
+	background: #FFF9CC;
+	
+}
 table.photo_gallery_mini td img {
 }
+
 
 #footer
 {
