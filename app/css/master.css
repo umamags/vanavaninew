@@ -198,6 +198,12 @@ table.photo_gallery td {
 	text-align: left;
 }
 
+div.photoList > .row > .col-md-3 {
+	width: 20%;
+	margin-left: 15px;
+	padding-left: 15px;
+}
+
 table.teachers_list td {
 	font-size: 12px;
 }
