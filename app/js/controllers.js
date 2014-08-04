@@ -30,6 +30,9 @@ vanavaniControllers.controller('mentorsCtrl', ['$scope', '$routeParams',
        function($scope, $routeParams) {
        }]);
 
+vanavaniControllers.controller('aboutTheSchoolCtrl', ['$scope', '$routeParams',
+                                               function($scope, $routeParams) {
+                                               }]);
 //Simple data
 vanavaniControllers.controller('nggrid-example2Ctrl', ['$scope',
                                             function($scope) {

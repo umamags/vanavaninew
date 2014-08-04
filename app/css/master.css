@@ -37,6 +37,22 @@ table.header2 {
 .schoolName {
 	color: blue;
 	font-weight: bold;
+	font-size: 18px;
+}
+
+.schoolLocation {
+	color: blue;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+div.topmenu a {
+   background: #FAEBD7;
+   color: red;
+   font-size: large;
+   font-weight: bold;
+   border: none;
+   margin-right: 10px;
 }
 
 table.header1 td.col1 {
