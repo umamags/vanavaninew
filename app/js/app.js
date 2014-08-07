@@ -20,6 +20,7 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/showCase', {templateUrl: 'partials/showCase.html', controller: 'showCaseCtrl'});
 	  $routeProvider.when('/contactUs', {templateUrl: 'partials/contactUs.html', controller: 'contactUsCtrl'});
 	  $routeProvider.when('/jobs', {templateUrl: 'partials/jobs.html', controller: 'jobsCtrl'});
+	  $routeProvider.when('/aboutTheSchool', {templateUrl: 'partials/aboutTheSchool.html', controller: 'aboutTheSchoolCtrl'});
 	  $routeProvider.when('/trustees', {templateUrl: 'partials/trustees.html', controller: 'trusteesCtrl'});
 	  $routeProvider.when('/newsLetter', {templateUrl: 'partials/newsLetter.html', controller: 'newsLetterCtrl'});
 	  $routeProvider.when('/studentParticulars', {templateUrl: 'partials/studentParticulars.html', controller: 'studentParticularsCtrl'});
@@ -31,6 +32,8 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/photoShowAll/:folderName', {templateUrl: 'partials/photoShowAll.html', controller: 'photoShowAllCtrl'});
 	  $routeProvider.when('/photoDetail/images/:folderName/:imageName', {templateUrl: 'partials/photoDetail.html', controller: 'photoDetailCtrl'});
 	  $routeProvider.when('/nggrid-example', {templateUrl: 'partials/nggrid-example.html', controller: 'nggrid-exampleCtrl'});
+	  $routeProvider.when('/mentors', {templateUrl: 'partials/mentors.html', controller: 'mentorsCtrl'});
+	  $routeProvider.when('/mentoring/links', {templateUrl: 'partials/mentoring/mentoring_links.html', controller: 'mentorsCtrl'});
 	  $routeProvider.otherwise({redirectTo: '/home'});
   }]);
 

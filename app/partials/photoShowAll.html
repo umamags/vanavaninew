@@ -1,9 +1,13 @@
 <div class="main_content">
-    <span ng-repeat="photo in photos"
-        class="thumbnail">     
-        <a href="#/photoDetail/{{photo.filename}}"><img ng-src="{{photo.filename}}" /></a>
-        <div ng-show="{{($index+1) % 4 == 0}}">
-        	<hr>
+You are here: Home > <a href="#/photoGallery">Photo Gallery</a> > Photo List
+<hr>
+<div class="main_content">
+<div class="photoList">
+    <div ng-repeat="photo in photos">
+        <div class="col-md-3">
+	        <a href="#/photoDetail/{{photo.filename}}">
+	        	<img ng-src="{{photo.filename}}" /></a>
         </div>
-    </span>
+    </div>
+</div>    
 </div>
