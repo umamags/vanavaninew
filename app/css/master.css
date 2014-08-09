@@ -1,6 +1,6 @@
 body {
 	margin-left: 20px;
-	width: 80%;
+	width: 100%;
 	background: #FFFFFF;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
@@ -9,20 +9,11 @@ p {
 	margin: 0;
 	padding: 0;
 }
-td {
-	vertical-align: top;
-}
 img {
 	cursor: pointer;
 }
-td.right {
-	text-align: right;
-}
 #header {
 	background: #F2F3F4;
-}
-#header,
-#mainbody {
 }
 
 table.header1 {
@@ -108,7 +99,7 @@ td#rightmenu {
 	width: 16%;
 }
 
-td.leftmenutable1 {
+.leftmenutable1 {
 	background: #5395D1;
 	padding: 10px 10px 10px 10px;
 	border-top-left-radius: 12px;
@@ -117,10 +108,10 @@ td.leftmenutable1 {
 	border-bottom-left-radius: 12px;
 	border: 3px solid #E5E5E5;
 }
-td.leftmenutable1 a {
+.leftmenutable1 a {
 	color: white;
 }
-td.leftmenutable2
+.leftmenutable2
  {
 	background: #FEFACA;
 	padding: 10px 10px 10px 10px;
@@ -130,10 +121,10 @@ td.leftmenutable2
 	border-bottom-left-radius: 12px;
 	border: 3px solid #E5E5E5;
 }
-td.leftmenutable2 a {
+.leftmenutable2 a {
 	color: red;
 }
-td.leftmenutable3
+.leftmenutable3
  {
 	background: #7CFF7E;
 	padding: 10px 10px 10px 10px;
@@ -143,7 +134,7 @@ td.leftmenutable3
 	border-bottom-left-radius: 12px;
 	border: 3px solid #E5E5E5;
 }
-td.leftmenutable3 a {
+.leftmenutable3 a {
 	color: green;
 }
 
@@ -155,7 +146,7 @@ table.mainbodyhomepagetable1 td p {
 	width: 550px;
 }
 
-table.mainbodyhomepagetable2 td
+.mainbodyhomepagetable2
 {
 	background: #FFD009;
 	color: #000000;

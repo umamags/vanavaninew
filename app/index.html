@@ -28,28 +28,23 @@
 <link rel="stylesheet" href="css/master.css" />
 </head>
 <body>
-	<table>
-		<tr>
-			<td>
+	<div class="row">
 				<div ng-include="'partials/header.html'"></div>
-				<table>
-					<tr>
-						<td id="leftmenu">
-							<div ng-include="'partials/leftmenu.html'"></div>
-						</td>
-						<td>
-							<div class="mainbody" ng-view></div>
-						</td>
-						<td id="rightmenu">
-							<div ng-include="'partials/rightmenu.html'"></div>
-						</td>
-					</tr>
-				</table>
-				<div ng-include="'partials/footer.html'"></div>
-			</td>
-		</tr>
-	</table>
-
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<div ng-include="'partials/leftmenu.html'"></div>
+		</div>
+		<div class="col-md-8">
+			<div class="mainbody" ng-view></div>
+		</div>
+		<div class="col-md-2">
+			<div ng-include="'partials/rightmenu.html'"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div ng-include="'partials/footer.html'"></div>
+	</div>
 
 	<!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -76,7 +71,5 @@
 	<script src="jslib/vendor/angularstrap/bootstrap-datepicker.js"></script>
 	<script src="jslib/vendor/angularstrap/bootstrap-timepicker.js"></script>
 	<script src="jslib/vendor/angularui/angular-ui.js"></script>
-
-
 </body>
 </html>
