@@ -1,5 +1,5 @@
 'use strict';
-
+ 
 /* App Module */
 var vanavaniApp = angular.module('vanavaniApp', [
   'ngRoute',
@@ -26,6 +26,8 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/studentParticulars', {templateUrl: 'partials/studentParticulars.html', controller: 'studentParticularsCtrl'});
 	  $routeProvider.when('/feeStructure', {templateUrl: 'partials/feeStructure.html', controller: 'feeStructureCtrl'});
 	  $routeProvider.when('/feeConcessionDetails', {templateUrl: 'partials/feeConcessionDetails.html', controller: 'feeConcessionDetailsCtrl'});
+	  $routeProvider.when('/feeConcessionDetails/1', {templateUrl: 'partials/feeConcessionDetails.html', controller: 'feeConcessionDetailsCtrl'});
+	  $routeProvider.when('/feeConcessionDetails/2', {templateUrl: 'partials/feeConcessionDetails.html', controller: 'feeConcessionDetailsCtrl'});
 	  $routeProvider.when('/goals', {templateUrl: 'partials/goals.html', controller: 'goalsCtrl'});
 	  $routeProvider.when('/howToSponsor', {templateUrl: 'partials/howToSponsor.html', controller: 'howToSponsorCtrl'});
 	  $routeProvider.when('/thankYou', {templateUrl: 'partials/thankYou.html', controller: 'thankYouCtrl'});

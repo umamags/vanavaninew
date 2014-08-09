@@ -16,15 +16,6 @@ img {
 	background: #F2F3F4;
 }
 
-table.header1 {
-	border-bottom: 2px solid #E5E5E5;
-	text-align: center;
-	color: blue;
-}
-table.header2 {
-	background: #F2F3F4;	
-}
-
 .schoolName {
 	color: blue;
 	font-weight: bold;
@@ -44,59 +35,6 @@ div.topmenu a {
    font-weight: bold;
    border: none;
    margin-right: 10px;
-}
-
-table.header1 td.col1 {
-	padding-right: 250px;
-	color: blue;
-	font-weight: bold;
-}
-
-table.header1 td.col1 p {
-	padding: 2px;
-	margin: 0px;
-}
-table.header1 td.col1 p.first {
-	font-size: 18px;
-}
-table.header1 td.col1 p.second {
-	font-size: 12px;
-	font-weight: bold;
-}
-table.header1 td.col2 {
-	color: black;
-	background: #D5E6F5;
-	font-size: 12px;
-}
-table.header2 {
-	/* border: 1px solid #E5E5E5; 
-	border-bottom: 5px solid #E5E5E5; */
-	margin-left: 20px; 
-}
-table.header2 td.link {
-	padding-right: 43px;
-	padding-left: 5px;
-	border: 3px solid #E5E5E5;
-	font-weight: bold;
-	font-size: 14px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	background: #FAEBD7;
-}
-table.header2 td.link a {
-	color: red;
-	text-align: right;
-}
-
-td#leftmenu {
-	background: #C7DDF2;
-	width: 18%;
-}
-td#rightmenu {
-	background: #C7DDF2;
-	width: 16%;
 }
 
 .leftmenutable1 {
@@ -138,14 +76,6 @@ td#rightmenu {
 	color: green;
 }
 
-table.mainbodyhomepagetable1 td {
-	color: red
-}
-
-table.mainbodyhomepagetable1 td p {
-	width: 550px;
-}
-
 .mainbodyhomepagetable2
 {
 	background: #FFD009;
@@ -158,27 +88,6 @@ table.mainbodyhomepagetable1 td p {
 	border: 3px solid #E5E5E5;
 }
 
-table.rightmenutable1 td
- {
-	background: #FFFFFF;
-	color: #000000;
-	padding: 10px 10px 10px 10px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	border: 3px solid #E5E5E5;
-}
-td.leftmenutable3 img {
-	padding-right: 30px; 
-}
-table.rightmenutable1 td img {
-	padding-right: 20px; 
-}
-table.rightmenu td img {
-	width: 170px;
-	height: 130px;
-}
 .main_content {
 	width: 700px;
 	padding: 5px 5px 5px 5px;
@@ -295,4 +204,26 @@ table#newsletter td {
 table#newsletter td.firstcol {
 	width: 75%;
 	
+}
+#my-slider-id {
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 600px; 
+    height: 400px;
+}
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 600px; 
+    height: 400px;
+}
+.gridStyle3 {
+    border: 1px solid rgb(212,212,212);
+    width: 600px; 
+    height: 400px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	background: #eaeaea;
 }

@@ -171,9 +171,6 @@ vanavaniControllers.controller('studentParticularsCtrl', ['$scope',
 vanavaniControllers.controller('feeStructureCtrl', ['$scope',
                                             function($scope) {
                                             }]);
-vanavaniControllers.controller('feeConcessionDetailsCtrl', ['$scope',
-                                            function($scope) {
-                                            }]);
 vanavaniControllers.controller('goalsCtrl', ['$scope',
                                             function($scope) {
                                             }]);
