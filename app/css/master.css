@@ -28,14 +28,6 @@ img {
 	font-size: 14px;
 }
 
-div.topmenu a {
-   background: #FAEBD7;
-   color: red;
-   font-size: large;
-   font-weight: bold;
-   border: none;
-   margin-right: 10px;
-}
 
 .leftmenutable1 {
 	background: #5395D1;
@@ -89,7 +81,6 @@ div.topmenu a {
 }
 
 .main_content {
-	width: 700px;
 	padding: 5px 5px 5px 5px;
 	background: #FFF9CC;
 	font-weight: bold;
