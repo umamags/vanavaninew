@@ -86,15 +86,6 @@ img {
 	font-weight: bold;
 }
 
-table.teachers_list {
-	margin-left: 10px;	
-}
-table.thank_you_table td,
-table.teachers_list td,
-table.photo_gallery td {
-	text-align: left;
-}
-
 div.photoList > .row > .col-md-3 {
 	width: 20%;
 	margin-left: 15px;
@@ -167,9 +158,6 @@ table.jobs tr.row2 {
 	font-weight: bold;
 	color: red;
 }
-td.showcaseArticle {
-	width: 500px;
-}
 p.red {
 	color: red;
 }
@@ -182,28 +170,9 @@ p.yellow {
 table#newsletter td {
 	padding-left: 10px;
 }
-table#newsletter td.firstcol {
-	width: 75%;
-	
-}
 #my-slider-id {
 	margin-left: 10px;
 	margin-top: 5px;
-}
-.gridStyle {
-    border: 1px solid rgb(212,212,212);
-    width: 600px; 
-    height: 400px;
-}
-.gridStyle {
-    border: 1px solid rgb(212,212,212);
-    width: 600px; 
-    height: 400px;
-}
-.gridStyle3 {
-    border: 1px solid rgb(212,212,212);
-    width: 600px; 
-    height: 400px;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
 	background: #eaeaea;
