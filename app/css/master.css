@@ -5,6 +5,9 @@ body {
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
 }
+.rightmenu {
+	background: #FFF9CC;
+}
 p {
 	margin: 0;
 	padding: 0;
