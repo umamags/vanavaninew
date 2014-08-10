@@ -1,6 +1,6 @@
 body {
 	margin-left: 20px;
-	width: 100%;
+	width: 95%;
 	background: #FFFFFF;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
@@ -86,16 +86,6 @@ img {
 	font-weight: bold;
 }
 
-table.maintable td {
-	border-right: 1px solid red;
-	border-top: 1px solid red;
-	text-align: right;
-	padding: 2px 2px 2px 2px;
-}
-table.maintable td.left {
-	text-align: left;
-	white-space: nowrap;
-}
 table.teachers_list {
 	margin-left: 10px;	
 }
