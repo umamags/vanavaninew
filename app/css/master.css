@@ -137,14 +137,26 @@ p.blue {
 p.yellow {
 	color: yellow;
 }
+
 #my-slider-id {
 	margin-left: 10px;
 	margin-top: 5px;
 	height: 413px;
 	width: 550px;
-	background-image: url('images/homepage/01.jpg');
-	background: red;
+	background: url('../images/homepage/01.jpg');
 }
+#mainpagecol1 {
+	
+}
+#mainpagecol2 {
+}
+#mainpagecol3 {
+	
+}
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
 	background: #eaeaea;
+}
+.panel-default {
+	margin-top: 5px;
 }
