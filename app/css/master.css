@@ -189,5 +189,22 @@ p.yellow {
     font-weight: bold;
 }
 .circle1 {
-	background: 
+	background: #efdecd;
+	color: #e52b50;
+}
+.circle2 {
+	background: #f0f8ff;
+	color: #007fff;
+}
+.circle3 {
+	background: #f7f75e;
+	color: #568203;
+}
+.circle4 {
+	background: #4b0082;
+	color: #ffffff;
+}
+.circle5 {
+	background: #ff4f00;
+	color: #f4f0ec;
 }
