@@ -1,37 +1,29 @@
 body {
 	margin-left: 20px;
-	width: 80%;
+	width: 95%;
 	background: #FFFFFF;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
+}
+.leftmenu button.btn-default {
+	width: 200px;
+	margin: 5px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.rightmenu {
+	background: #FFF9CC;
 }
 p {
 	margin: 0;
 	padding: 0;
 }
-td {
-	vertical-align: top;
-}
 img {
 	cursor: pointer;
 }
-td.right {
-	text-align: right;
-}
 #header {
 	background: #F2F3F4;
-}
-#header,
-#mainbody {
-}
-
-table.header1 {
-	border-bottom: 2px solid #E5E5E5;
-	text-align: center;
-	color: blue;
-}
-table.header2 {
-	background: #F2F3F4;	
 }
 
 .schoolName {
@@ -46,69 +38,8 @@ table.header2 {
 	font-size: 14px;
 }
 
-div.topmenu a {
-   background: #FAEBD7;
-   color: red;
-   font-size: large;
-   font-weight: bold;
-   border: none;
-   margin-right: 10px;
-}
 
-table.header1 td.col1 {
-	padding-right: 250px;
-	color: blue;
-	font-weight: bold;
-}
-
-table.header1 td.col1 p {
-	padding: 2px;
-	margin: 0px;
-}
-table.header1 td.col1 p.first {
-	font-size: 18px;
-}
-table.header1 td.col1 p.second {
-	font-size: 12px;
-	font-weight: bold;
-}
-table.header1 td.col2 {
-	color: black;
-	background: #D5E6F5;
-	font-size: 12px;
-}
-table.header2 {
-	/* border: 1px solid #E5E5E5; 
-	border-bottom: 5px solid #E5E5E5; */
-	margin-left: 20px; 
-}
-table.header2 td.link {
-	padding-right: 43px;
-	padding-left: 5px;
-	border: 3px solid #E5E5E5;
-	font-weight: bold;
-	font-size: 14px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	background: #FAEBD7;
-}
-table.header2 td.link a {
-	color: red;
-	text-align: right;
-}
-
-td#leftmenu {
-	background: #C7DDF2;
-	width: 18%;
-}
-td#rightmenu {
-	background: #C7DDF2;
-	width: 16%;
-}
-
-td.leftmenutable1 {
+.leftmenutable1 {
 	background: #5395D1;
 	padding: 10px 10px 10px 10px;
 	border-top-left-radius: 12px;
@@ -117,10 +48,10 @@ td.leftmenutable1 {
 	border-bottom-left-radius: 12px;
 	border: 3px solid #E5E5E5;
 }
-td.leftmenutable1 a {
+.leftmenutable1 a {
 	color: white;
 }
-td.leftmenutable2
+.leftmenutable2
  {
 	background: #FEFACA;
 	padding: 10px 10px 10px 10px;
@@ -130,10 +61,10 @@ td.leftmenutable2
 	border-bottom-left-radius: 12px;
 	border: 3px solid #E5E5E5;
 }
-td.leftmenutable2 a {
+.leftmenutable2 a {
 	color: red;
 }
-td.leftmenutable3
+.leftmenutable3
  {
 	background: #7CFF7E;
 	padding: 10px 10px 10px 10px;
@@ -143,19 +74,11 @@ td.leftmenutable3
 	border-bottom-left-radius: 12px;
 	border: 3px solid #E5E5E5;
 }
-td.leftmenutable3 a {
+.leftmenutable3 a {
 	color: green;
 }
 
-table.mainbodyhomepagetable1 td {
-	color: red
-}
-
-table.mainbodyhomepagetable1 td p {
-	width: 550px;
-}
-
-table.mainbodyhomepagetable2 td
+.mainbodyhomepagetable2
 {
 	background: #FFD009;
 	color: #000000;
@@ -167,51 +90,10 @@ table.mainbodyhomepagetable2 td
 	border: 3px solid #E5E5E5;
 }
 
-table.rightmenutable1 td
- {
-	background: #FFFFFF;
-	color: #000000;
-	padding: 10px 10px 10px 10px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	border: 3px solid #E5E5E5;
-}
-td.leftmenutable3 img {
-	padding-right: 30px; 
-}
-table.rightmenutable1 td img {
-	padding-right: 20px; 
-}
-table.rightmenu td img {
-	width: 170px;
-	height: 130px;
-}
 .main_content {
-	width: 700px;
 	padding: 5px 5px 5px 5px;
 	background: #FFF9CC;
 	font-weight: bold;
-}
-
-table.maintable td {
-	border-right: 1px solid red;
-	border-top: 1px solid red;
-	text-align: right;
-	padding: 2px 2px 2px 2px;
-}
-table.maintable td.left {
-	text-align: left;
-	white-space: nowrap;
-}
-table.teachers_list {
-	margin-left: 10px;	
-}
-table.thank_you_table td,
-table.teachers_list td,
-table.photo_gallery td {
-	text-align: left;
 }
 
 div.photoList > .row > .col-md-3 {
@@ -220,12 +102,6 @@ div.photoList > .row > .col-md-3 {
 	padding-left: 15px;
 }
 
-table.teachers_list td {
-	font-size: 12px;
-}
-table.teachers_list img {
-	width: 250px;
-}
 /* bootstrap related styles */
 .teachersList {
 	background: #F2F3F4;
@@ -234,45 +110,11 @@ table.teachers_list img {
 	background: #FFF9CC;
 	
 }
-table.photo_gallery_mini td img {
-}
-
-
 #footer
 {
 	background: #F2F3F4;
 	font-size: 10px;
 	border-top: 1px solid #000000;
-}
-#footer table td {
-	font-size: 10px;
-}
-table.goal td {
-	padding: 3px 3px 3px 3px;
-}
-table.goal tr.row1
-{
-	background: #FAEBD7;
-	color: #841B2D;
-	font-weight: bold;
-}
-table.goal tr.row2 {
-	background: #FE6F5E;
-	color: white;
-	font-weight: bold;
-}
-table.jobs tr.row1
-{
-	background: #FAEBD7;
-	color: #841B2D;
-	font-weight: bold;
-	border: 5px solid #FFF9CC;
-	
-}
-table.jobs tr.row2 {
-	background: #FE6F5E;
-	color: white;
-	font-weight: bold;
 }
 .realbig {
 	padding-top: 20px;
@@ -285,7 +127,6 @@ table.jobs tr.row2 {
 .showcaseheader {
 	font-weight: bold;
 	color: red;
-	border-top: 1px solid #000000;
 }
 p.red {
 	color: red;
@@ -296,6 +137,26 @@ p.blue {
 p.yellow {
 	color: yellow;
 }
-table#newsletter td.firstcol {
-	width: 90%;
+
+#my-slider-id {
+	margin-left: 10px;
+	margin-top: 5px;
+	height: 413px;
+	width: 550px;
+	background: url('../images/homepage/01.jpg');
+}
+#mainpagecol1 {
+	
+}
+#mainpagecol2 {
+}
+#mainpagecol3 {
+	
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	background: #eaeaea;
+}
+.panel-default {
+	margin-top: 5px;
 }

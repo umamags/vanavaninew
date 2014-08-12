@@ -1,34 +1,24 @@
 <div id="mainbodyhomepage">
-	<table class="mainbodyhomepagetable1">
-		<tr>
-			<td>
-				<div id="placeholder">
-				<table><tr>
-					<td>
-					   <div ng-include="'partials/sliderotator.html'"></div>
-                    </td>					
-				</tr></table>	
+	<div class="row">
+		<div id="mainpagecol1" class="col-md-7">
+		   <div ng-include="'partials/sliderotator.html'"></div>
+		</div>
+		<div id="mainpagecol2" class="col-md-2">
+			<div class="panel panel-default">
+				<div class="panel-heading">Key Facts</div>
+				<div class="panel-body">
+					<a href="#/aboutTheSchool">Started in 1989</a><br>
+					<a href="#/trustees">Run by family trust</a><br>
+					<a href="#/aboutTheSchool">100% pass</a><br>
+					<a href="#/aboutTheSchool">State approved</a><br>
+					<a href="#/home">Digital Class</a><br>
+					<a href="#/home">Three School Vans</a><br>
+					<a href="#/home">LKG to X std</a>
 				</div>
-				<div id="notice">
-				</div>
-			</td>
-			<td>
-				<table class="mainbodyhomepagetable2">
-					<tr><td><a href="#/aboutTheSchool">Started in 1989</a></td></tr>
-					<tr><td><a href="#/trustees">Run by family trust</a></td></tr>
-					<tr><td><a href="#/aboutTheSchool">100% pass</a></td></tr>
-					<tr><td><a href="#/aboutTheSchool">State approved</a></td></tr>
-					<tr><td><a href="#/home">Digital Class</a></td></tr>
-					<tr><td><a href="#/home">Three School Vans</a></td></tr>
-					<tr><td><a href="#/home">LKG to X std</a></td></tr>
-				</table>	
-			</td>
-		</tr>
-	</table>
-	<table>
-	<tr>
-		<td><img src="images/map/school_location_01.jpg" width="340px" /></td>
-		<td><img src="images/map/school_location_02.jpg" width="340px" /></td>
-	</tr>
-	</table>				
+			</div>		
+		</div>
+		<div id="mainpagecol3" class="col-md-3 rightmenu">
+		   <div ng-include="'partials/rightmenu.html'"></div>
+		</div>		
+	</div>	
 </div>
