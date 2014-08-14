@@ -171,10 +171,14 @@ p.yellow {
 .circles {
 	margin-top: 10px;
 }
+.circleText {
+	margin-left: 25px;
+	font-weight: bold;
+}
 .circle {
     border-radius: 50%;
 	margin: 5px;
-	margin-left: 15px;
+	margin-left: 20px;
     width: 100px;
     height: 100px;
     padding: 8px;
