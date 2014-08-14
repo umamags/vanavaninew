@@ -103,12 +103,9 @@ img {
 	font-weight: bold;
 }
 
-div.photoList > .row > .col-md-3 {
-	width: 20%;
-	margin-left: 15px;
-	padding-left: 15px;
+img.myphoto {
+	margin-bottom: 5px;
 }
-
 /* bootstrap related styles */
 .teachersList {
 	background: #F2F3F4;
