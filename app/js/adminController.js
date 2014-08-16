@@ -6,10 +6,17 @@ var vanavaniControllers = angular.module('vanavaniControllers');
 vanavaniControllers.controller('adminCtrl', 
         function($scope, $location, $http) {
 	
-		  var path = $location.path();		  
+		  var path = $location.path();
 		  $("#tabOption0").removeClass("active");
 		  $("#tabOption1").removeClass("active");
 		  $("#tabOption2").removeClass("active");
+		  
+		  //od6 - class lkg
+		  //od7 - class ukg
+		  //od8 - class 5
+		  //od9 - class 6
+		  //od4 - class 1
+		  
 		  
 		  switch (path) {
 			  case "/admin" :
@@ -51,7 +58,8 @@ vanavaniControllers.controller('adminCtrl',
                   var data;
                   //var url = 'php/studentsList.php';
                   //var url = 'jsondata/studentsList.json';
-                  var url = 'https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od6/public/values?alt=json';
+                  //var url = 'https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od6/public/values?alt=json';
+                  var url = 'https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od5/public/values?alt=json';
                   
                   if (searchText) {
                       var ft = searchText.toLowerCase();
