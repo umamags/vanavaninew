@@ -26,6 +26,10 @@ vanavaniControllers.controller('photoDetailCtrl', ['$scope', '$routeParams',
 		  $scope.imageName = name;
        }]);
 
+vanavaniControllers.controller('photoTreeCtrl', ['$scope', '$routeParams',
+       function($scope, $routeParams) {
+       }]);
+
 vanavaniControllers.controller('mentorsCtrl', ['$scope', '$routeParams',
        function($scope, $routeParams) {
        }]);

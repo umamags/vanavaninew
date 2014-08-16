@@ -36,6 +36,7 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/nggrid-example', {templateUrl: 'partials/nggrid-example.html', controller: 'nggrid-exampleCtrl'});
 	  $routeProvider.when('/mentors', {templateUrl: 'partials/mentors.html', controller: 'mentorsCtrl'});
 	  $routeProvider.when('/mentoring/links', {templateUrl: 'partials/mentoring/mentoring_links.html', controller: 'mentorsCtrl'});
+	  $routeProvider.when('/phototree', {templateUrl: 'partials/photo/photoTree.html', controller: 'photoTreeCtrl'});
 	  $routeProvider.otherwise({redirectTo: '/home'});
   }]);
 

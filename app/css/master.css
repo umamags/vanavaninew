@@ -1,15 +1,12 @@
 body {
-	margin-left: 20px;
+	margin-left: 60px;
 	width: 95%;
 	background: #FFF9CC;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
 }
-.leftmenu button.btn-default {
-	width: 200px;
-	margin: 5px;
-	font-size: 18px;
-	font-weight: bold;
+.leftmenu {
+	background: #FFF9CC;
 }
 
 .rightmenu {
@@ -45,45 +42,6 @@ img {
 	font-size: 14px;
 }
 
-
-.leftmenutable1 {
-	background: #5395D1;
-	padding: 10px 10px 10px 10px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	border: 3px solid #E5E5E5;
-}
-.leftmenutable1 a {
-	color: white;
-}
-.leftmenutable2
- {
-	background: #FEFACA;
-	padding: 10px 10px 10px 10px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	border: 3px solid #E5E5E5;
-}
-.leftmenutable2 a {
-	color: red;
-}
-.leftmenutable3
- {
-	background: #7CFF7E;
-	padding: 10px 10px 10px 10px;
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-	border-bottom-right-radius: 12px;
-	border-bottom-left-radius: 12px;
-	border: 3px solid #E5E5E5;
-}
-.leftmenutable3 a {
-	color: green;
-}
 
 .mainbodyhomepagetable2
 {

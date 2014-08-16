@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="css/jquery-ui.css" />
 <link rel="stylesheet" href="css/vendor/angularstrap/styles.css">
 <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/vendor/bootstrap/bootstrap-tree-combined.min.css">
 <link rel="stylesheet" href="css/master.css" />
 </head>
 <body>
@@ -27,7 +28,10 @@
 		<div ng-include="'partials/header.html'"></div>
 	</div>
 	<div id="centerbody" class="row">
-\		<div class="col-md-9">
+		<div class="col-md-3 leftmenu">
+		   <div ng-include="'partials/leftmenu.html'"></div>
+		</div>		
+		<div class="col-md-6">
 			<div class="mainbody" ng-view></div>
 		</div>
 		<div class="col-md-3 rightmenu">
@@ -43,21 +47,20 @@
   <![endif]-->
 
 	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="js/beaverslider.js"></script>
-	<script src="js/beaverslider-effects.js"></script>
 	<script src="jslib/angular.js"></script>
 	<script src="jslib/angular-route.js"></script>
 	<script src="jslib/angular-resource.js"></script>
+	<script src="jslib/vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="js/beaverslider.js"></script>
+	<script src="js/beaverslider-effects.js"></script>
 	<script src="js/ng-grid-2.0.11.min.js"></script>
+	<script src="jslib/jquery.flot.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/services.js"></script>
 	<script src="js/controllers.js"></script>
 	<script src="js/filters.js"></script>
 	<script src="js/directives.js"></script>
-	<script src="jslib/vendor/bootstrap/bootstrap.min.js"></script>
-	<script src="jslib/vendor/angularui/angular-ui.js"></script>
-	<script src="jslib/jquery.flot.js"></script>
 	<script src="js/feeConcessionController.js"></script>
 	<script src="js/feeStructureController.js"></script>
 </body>
