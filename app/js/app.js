@@ -37,6 +37,8 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/mentors', {templateUrl: 'partials/mentors.html', controller: 'mentorsCtrl'});
 	  $routeProvider.when('/mentoring/links', {templateUrl: 'partials/mentoring/mentoring_links.html', controller: 'mentorsCtrl'});
 	  $routeProvider.when('/phototree', {templateUrl: 'partials/photo/photoTree.html', controller: 'photoTreeCtrl'});
+	  $routeProvider.when('/admin', {templateUrl: 'partials/admin/admin.html', controller: 'adminCtrl'});
+	  $routeProvider.when('/admin/studentDetails', {templateUrl: 'partials/admin/admin.html', controller: 'adminCtrl'});
 	  $routeProvider.otherwise({redirectTo: '/home'});
   }]);
 
