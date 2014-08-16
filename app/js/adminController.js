@@ -50,7 +50,8 @@ vanavaniControllers.controller('adminCtrl',
               setTimeout(function () {
                   var data;
                   //var url = 'php/studentsList.php';
-                  var url = 'jsondata/studentsList.json';
+                  //var url = 'jsondata/studentsList.json';
+                  var url = 'https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od6/public/values?alt=json';
                   
                   if (searchText) {
                       var ft = searchText.toLowerCase();
@@ -86,7 +87,7 @@ vanavaniControllers.controller('adminCtrl',
         	        pagingOptions: $scope.pagingOptions,
         	        filterOptions: $scope.filterOptions,
         	        columnDefs: [
-        	        	            {field: "gsx$nameofstudents.$t"}
+        	        	            {field: "gsx$nameofstudents.$t", displayName: "Name"}
         	        	        ]
         	    };
           
