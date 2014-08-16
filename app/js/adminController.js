@@ -6,7 +6,29 @@ var vanavaniControllers = angular.module('vanavaniControllers');
 vanavaniControllers.controller('adminCtrl', 
         function($scope, $location, $http) {
 	
-        console.log("in admin");  
+		  var path = $location.path();		  
+		  $("#tabOption0").removeClass("active");
+		  $("#tabOption1").removeClass("active");
+		  $("#tabOption2").removeClass("active");
+		  
+		  switch (path) {
+			  case "/admin" :
+				  $scope.tabOption = "0";
+				  $("#tabOption0").addClass("active");
+				  break;
+			  case "/admin/studentDetails" :
+				  $scope.tabOption = "1";
+				  $("#tabOption1").addClass("active");
+				  break;
+			  case "/admin/studentDetails2" :
+				  $scope.tabOption = "2";
+				  $("#tabOption2").addClass("active");
+				  break;
+			  default:
+				  $scope.tabOption = "0";
+				  break;
+		  };
+			  
 		$scope.filterOptions = {
         	        filterText: "",
         	        useExternalFilter: true
@@ -28,14 +50,14 @@ vanavaniControllers.controller('adminCtrl',
                   var data;
                   if (searchText) {
                       var ft = searchText.toLowerCase();
-                      $http.get('jsondata/students.json').success(function (largeLoad) {		
+                      $http.get('php/studentsList.php').success(function (largeLoad) {		
                           data = largeLoad.filter(function(item) {
                               return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
                           });
                           $scope.setPagingData(data,page,pageSize);
                       });            
                   } else {
-                      $http.get('jsondata/students.json').success(function (largeLoad) {
+                      $http.get('php/studentsList.php').success(function (largeLoad) {
                           $scope.setPagingData(largeLoad,page,pageSize);
                       });
                   }
