@@ -40,7 +40,8 @@ vanavaniControllers.controller('adminCtrl',
               currentPage: 1
           };	    
           $scope.setPagingData = function(data, page, pageSize){
-              $scope.myData = data;
+              //$scope.myData = data;
+        	  $scope.myData = data.feed.entry;
               if (!$scope.$$phase) {
                   $scope.$apply();
               }
@@ -48,16 +49,19 @@ vanavaniControllers.controller('adminCtrl',
           $scope.getPagedDataAsync = function (pageSize, page, searchText) {
               setTimeout(function () {
                   var data;
+                  //var url = 'php/studentsList.php';
+                  var url = 'jsondata/studentsList.json';
+                  
                   if (searchText) {
                       var ft = searchText.toLowerCase();
-                      $http.get('php/studentsList.php').success(function (largeLoad) {		
+                      $http.get(url).success(function (largeLoad) {		
                           data = largeLoad.filter(function(item) {
                               return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
                           });
                           $scope.setPagingData(data,page,pageSize);
                       });            
                   } else {
-                      $http.get('php/studentsList.php').success(function (largeLoad) {
+                      $http.get(url).success(function (largeLoad) {
                           $scope.setPagingData(largeLoad,page,pageSize);
                       });
                   }
@@ -80,7 +84,10 @@ vanavaniControllers.controller('adminCtrl',
         			showFooter: false,
         	        totalServerItems: 'totalServerItems',
         	        pagingOptions: $scope.pagingOptions,
-        	        filterOptions: $scope.filterOptions
+        	        filterOptions: $scope.filterOptions,
+        	        columnDefs: [
+        	        	            {field: "gsx$nameofstudents.$t"}
+        	        	        ]
         	    };
           
         });

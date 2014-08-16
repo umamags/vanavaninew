@@ -7,3 +7,24 @@ Completed
 JSON Url:
 https://docs.google.com/spreadsheet/ccc?key=0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc#gid=0
 
+Refer to url:
+https://coderwall.com/p/duapqq
+
+Copy the key=... part 
+(in my example it is 0AtMEoZDi5-pedElCS1lrVnp0Yk1vbFdPaUlOc3F3a2c ) 
+and put it into this URL: 
+https://spreadsheets.google.com/feeds/list/PUT-KEY-HERE/od6/public/values?alt=json-in-script&callback= 
+instead of "PUT-KEY-HERE".
+
+https://spreadsheets.google.com/feeds/list/PUT-KEY-HERE/od6/public/values?alt=json
+
+https://spreadsheets.google.com/feeds/list/0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc/od6/public/values?alt=json
+
+Our spreadsheet
+student details
+https://docs.google.com/spreadsheet/ccc?key=0AnmfnATpC8YhdGdFMlpaZmREb1JGSGxhV180Z2VWaWc#gid=0
+
+JSON format:
+object -> feed -> entry -> this has all the rows
+
+feed.entry
