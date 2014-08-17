@@ -17,6 +17,7 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/videoGallery', {templateUrl: 'partials/videoGallery.html', controller: 'videoGalleryCtrl'});
 	  $routeProvider.when('/videoGallery/annualDay/2014', {templateUrl: 'partials/videoGalleryAnnualDay2014.html', controller: 'videoGalleryCtrl'});
 	  $routeProvider.when('/videoGallery/childrensDay/2013', {templateUrl: 'partials/videoGalleryChildrensDay2013.html', controller: 'videoGalleryCtrl'});
+	  $routeProvider.when('/videoGallery/independenceDay/2014', {templateUrl: 'partials/videoGalleryIndependenceDay2014.html', controller: 'videoGalleryCtrl'});
 	  $routeProvider.when('/showCase', {templateUrl: 'partials/showCase.html', controller: 'showCaseCtrl'});
 	  $routeProvider.when('/contactUs', {templateUrl: 'partials/contactUs.html', controller: 'contactUsCtrl'});
 	  $routeProvider.when('/jobs', {templateUrl: 'partials/jobs.html', controller: 'jobsCtrl'});

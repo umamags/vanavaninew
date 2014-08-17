@@ -28,3 +28,7 @@ JSON format:
 object -> feed -> entry -> this has all the rows
 
 feed.entry
+
+Panel minimize and maximize
+-----------------------------
+http://jsfiddle.net/uzmjq/
