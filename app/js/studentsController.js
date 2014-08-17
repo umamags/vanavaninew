@@ -55,15 +55,30 @@ vanavaniControllers.controller('studentsCtrl',
           }, true);
           $scope.gridOptions = {
         	        data: 'myData',
-        	        enablePaging: true,
+        	        enablePaging: false,
         			showFooter: true,
         	        totalServerItems: 'totalServerItems',
-        	        pagingOptions: $scope.pagingOptions,
         	        filterOptions: $scope.filterOptions,
         	        showFilter: true,
+        	        enableColumnResize: true,
+        	        enableColumnReordering: true,
+        	        showColumnMenu: true,
+        	        showGroupPanel: true,
         	        columnDefs: [
-     	        	            {field: "StudentName"},
-     	        	            {field: "Class"},
+     	        	            {field: "StudentName", width: 200},
+     	        	            {field: "Class", width: 50},
+     	        	            {field: "FatherOccupation", width: 120},     	        	            
+     	        	            {field: "siblings", width: 100},
+     	        	            {field: "TV", width: 100},
+     	        	            {field: "newspaper", width: 100},
+     	        	            {field: "Internet", width: 100},
+     	        	            {field: "vehicle", width: 100},
+     	        	            {field: "Readinghabit", width: 100},
+     	        	            {field: "TVProgramName", width: 150},
+     	        	            {field: "FatherName", width: 125, visible: false},
+     	        	            {field: "MotherName", width: 125, visible: false},
+     	        	            {field: "MotherOccupation", width: 100, visible: false},
+     	        	            {field: "VacationActivity", width:125, visible: false}
      	        	        ]
         	    };
           

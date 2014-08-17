@@ -162,3 +162,6 @@ p.yellow {
 .video {
 	margin-top: 20px;
 }
+#studentsGrid {
+	width: 100%;
+}
