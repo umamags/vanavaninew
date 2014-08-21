@@ -41,7 +41,7 @@ vanavaniControllers.controller('aboutTheSchoolCtrl', [ '$scope',
 
 vanavaniControllers.controller('homeCtrl', [ '$scope', function($scope) {
 	$scope.$on('$viewContentLoaded', function() {
-		window.scrollTo(0, 180);		
+		window.scrollTo(0, 0);		
 		$("#circle0").addClass("circleActive");
 		$("#circle1").addClass("circleActive");
 		$("#circle2").addClass("circleActive");

@@ -1,7 +1,7 @@
 body {
-	margin-left: 60px;
+	margin-left: 30px;
 	width: 95%;
-	background: #FFF9CC;
+	background: #F2F3F4;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
 }
@@ -22,7 +22,12 @@ img {
 #header {
 	background: #F2F3F4;
 }
-
+.headerLogo {
+	margin-left: 10px;
+}
+.headerButtons {
+	margin-left: 10px;
+}
 .headerButtons button {
 	background: #FAEBD7;
 	color: red;
@@ -42,7 +47,9 @@ img {
 	font-size: 14px;
 }
 
-
+#mainbodyhomepage {
+	background: #FFF9CC;
+}
 .mainbodyhomepagetable2
 {
 	background: #FFD009;
