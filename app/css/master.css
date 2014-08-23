@@ -1,7 +1,7 @@
 body {
-	margin-left: 60px;
+	margin-left: 30px;
 	width: 95%;
-	background: #FFF9CC;
+	background: #F2F3F4;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
 }
@@ -22,7 +22,12 @@ img {
 #header {
 	background: #F2F3F4;
 }
-
+.headerLogo {
+	margin-left: 10px;
+}
+.headerButtons {
+	margin-left: 10px;
+}
 .headerButtons button {
 	background: #FAEBD7;
 	color: red;
@@ -42,7 +47,9 @@ img {
 	font-size: 14px;
 }
 
-
+#mainbodyhomepage {
+	background: #FFF9CC;
+}
 .mainbodyhomepagetable2
 {
 	background: #FFD009;
@@ -59,6 +66,7 @@ img {
 	padding: 5px 5px 5px 5px;
 	background: #FFF9CC;
 	font-weight: bold;
+	margin-left: 10px;
 }
 
 img.myphoto {
@@ -122,10 +130,11 @@ p.yellow {
 	margin-left: 25px;
 	font-weight: bold;
 }
+
 .circle {
     border-radius: 50%;
 	margin: 5px;
-	margin-left: 20px;
+	margin-left: 400px;
     width: 100px;
     height: 100px;
     padding: 8px;
@@ -139,23 +148,31 @@ p.yellow {
     font: 12px Arial, sans-serif;
     font-weight: bold;
 }
-.circle1 {
-	background: #efdecd;
-	color: #e52b50;
+img#student_with_books {
+	margin-top: 20px;
+	width: 60px;
 }
-.circle2 {
+.circleActive {
+	margin-left: -10px;
+	transition: margin-left 2s;
+}
+#circle1 {
+	background: #efdecd;
+	color: #e52b50;	
+}
+#circle2 {
 	background: #f0f8ff;
 	color: #007fff;
 }
-.circle3 {
+#circle3 {
 	background: #f7f75e;
 	color: #568203;
 }
-.circle4 {
+#circle4 {
 	background: #4b0082;
 	color: #ffffff;
 }
-.circle5 {
+#circle5 {
 	background: #ff4f00;
 	color: #f4f0ec;
 }
