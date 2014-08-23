@@ -7,7 +7,6 @@ vanavaniControllers.controller('studentsCtrl',
         function($scope, $location, $http) {
 		
 		$scope.toggleModal = function(imageName) {
-			console.log(imageName);
 			var name = imageName;
 			name = name.replace("_medium.jpg", "");
 			name = name.replace("_medium.JPG", "");
