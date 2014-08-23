@@ -7,6 +7,12 @@ vanavaniControllers.controller('teachersListCtrl', [ '$scope', 'Teacher',
 		function($scope, Teacher) {
 			$scope.teachers = Teacher.query();
 			$scope.orderProp = 'sno';
+			
+			$scope.modalShown = false;
+			$scope.toggleModal = function() {
+				console.log("Button clicked");
+			    $scope.modalShown = !$scope.modalShown;
+			};
 		} ]);
 
 vanavaniControllers.controller('photoShowAllCtrl', [ '$scope', '$routeParams',
