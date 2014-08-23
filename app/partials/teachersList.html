@@ -17,7 +17,7 @@
 				<div class="col-md-1">{{teacher.sno}}</div>
 				<div class="col-md-2">{{teacher.name}}</div>
 				<div class="col-md-3">
-					<button ng-click='toggleModal()'>
+					<button ng-click='toggleModal(teacher.img)'>
 						<img ng-src="{{teacher.img}}" />
 					</button>
 				</div>
@@ -30,8 +30,7 @@
 		</div>
 	</div>
 	<modal-dialog show='modalShown' width='550' height='400'>
-		This is my content
-		<p>
+		<img ng-src="{{modalDialogImage}}" />
 	</modal-dialog>
 
 </div>

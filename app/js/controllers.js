@@ -9,8 +9,12 @@ vanavaniControllers.controller('teachersListCtrl', [ '$scope', 'Teacher',
 			$scope.orderProp = 'sno';
 			
 			$scope.modalShown = false;
-			$scope.toggleModal = function() {
-				console.log("Button clicked");
+			$scope.toggleModal = function(imageName) {
+				var name = imageName;
+				name = name.replace("_medium.jpg", "");
+				name = name.replace("_medium.JPG", "");
+			    $scope.modalDialogImage = name;
+				
 			    $scope.modalShown = !$scope.modalShown;
 			};
 		} ]);
