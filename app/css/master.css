@@ -197,7 +197,7 @@ img#student_with_books {
 .ng-modal-dialog {
   /* A centered div above the overlay with a box shadow. */
   z-index:10000;
-  position: absolute;
+  position: fixed;
 
   /* Center the dialog */
   top: 100px;
