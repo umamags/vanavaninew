@@ -201,12 +201,10 @@ img#student_with_books {
 
   /* Center the dialog */
   top: 100px;
-  left: 100px;
-  width: 20px; /* Default */
-  height: 20px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
+  left: 300px;
+  transform: translate(0%, 0%);
+  -webkit-transform: translate(0%, 0%);
+  -moz-transform: translate(0%, 0%);
 
   background-color: #fff;
   box-shadow: 4px 4px 80px #000;
