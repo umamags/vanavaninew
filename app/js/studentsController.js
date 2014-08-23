@@ -5,7 +5,17 @@ var vanavaniControllers = angular.module('vanavaniControllers');
 
 vanavaniControllers.controller('studentsCtrl', 
         function($scope, $location, $http) {
-				  
+		
+		$scope.toggleModal = function(imageName) {
+			console.log(imageName);
+			var name = imageName;
+			name = name.replace("_medium.jpg", "");
+			name = name.replace("_medium.JPG", "");
+		    $scope.modalDialogImage = "images/students/" + name;
+			
+		    $scope.modalShown = !$scope.modalShown;
+		};
+
 		$scope.filterOptions = {
         	        filterText: "",
         	        useExternalFilter: false
@@ -68,7 +78,7 @@ vanavaniControllers.controller('studentsCtrl',
         	        columnDefs: [
      	        	            {field: "StudentName", width: 200},
      	        	            {field: "PhotoFileName", width: 200, 
-     	        	            	cellTemplate: '<div><img src="images/students/{{row.getProperty(col.field)}}" /></div>'},
+     	        	            	cellTemplate: '<div><button ng-click="toggleModal(row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></button></div>'},
      	        	            {field: "Class", width: 50},
      	        	            {field: "FatherOccupation", width: 120},     	        	            
      	        	            {field: "siblings", width: 100},
