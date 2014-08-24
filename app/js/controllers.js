@@ -42,13 +42,20 @@ vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService',
 			$scope.User = User;
 			
 			$scope.login = function() {
-				if ($scope.User.username == 'admin' && $scope.User.password == 'vanavani') {
-					User.isLogged = "true";
-					User.username = $scope.username;
-					User.password = "";
-					$scope.User = User;
-					$("#adminMenu").show();
-				}
+				var url = "php/LoginService.php?username=" + $scope.User.username + "&password=" + $scope.User.password;
+                $http.get(url).success(function (response) {		
+                    User.password = "";
+                    User.isLogged = response[0].loggedin;
+                    if (User.isLogged == "true") {
+        				User.username = $scope.username;                    	
+        				$("#adminMenu").show();
+                    } else {
+                    	User.error = response[0].error;
+                    	console.log(User.error);
+                    	$("#adminMenu").hide();
+                    }
+    				$scope.User = User;
+                });            				
 			}
 			
 			$scope.logout = function() {				

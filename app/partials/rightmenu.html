@@ -6,6 +6,7 @@
 				<div class="col-md-2">
 					<div ng-switch on="User.isLogged">
 						<div ng-switch-when="false">
+							<label class="col-md-2">{{User.error}}</label>
 							<input type="text" ng-model="User.username" />
 							<input type="password" ng-model="User.password" /> 
 							<button type="button" class="btn btn-lg" ng-click="login()">Login</button>
