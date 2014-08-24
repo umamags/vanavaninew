@@ -224,3 +224,9 @@ img#student_with_books {
   font-weight: bold;
   font-family: 'arial', 'sans-serif';
 }
+.nowrap {
+	white-space: nowrap;
+}
+.error {
+	color: red;
+}
