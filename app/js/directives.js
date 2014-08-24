@@ -22,3 +22,15 @@ vanavaniControllers.directive('modalDialog', function() {
 	    }
 	  };
 	});
+
+vanavaniControllers.directive('checkUser', ['$rootScope', '$location', 'userSrv', function ($root, $location, userSrv) {
+	return {
+		link: function (scope, elem, attrs, ctrl) {
+			$root.$on('$routeChangeStart', function(event, currRoute, prevRoute){
+				if (!prevRoute.access.isFree && !userSrv.isLogged) {
+					// reload the login route
+				}
+			});
+		}
+	}
+}]);

@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-var vanavaniControllers = angular.module('vanavaniControllers', []);
+var vanavaniControllers = angular.module('vanavaniControllers', ['vanavaniServices']);
 
 vanavaniControllers.controller('teachersListCtrl', [ '$scope', 'Teacher',
 		function($scope, Teacher) {
@@ -37,6 +37,30 @@ vanavaniControllers.controller('photoDetailCtrl', [ '$scope', '$routeParams',
 			$scope.imageName = name;
 		} ]);
 
+vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService',
+		function($scope, $http, User) {
+			$scope.User = User;
+			
+			$scope.login = function() {
+				if ($scope.User.username == 'admin' && $scope.User.password == 'vanavani') {
+					User.isLogged = "true";
+					User.username = $scope.username;
+					User.password = "";
+					$scope.User = User;
+					$("#adminMenu").show();
+				}
+			}
+			
+			$scope.logout = function() {				
+				User.isLogged = "false";
+				User.username = "";
+				User.password = "";
+				$scope.User = User;
+				$("#adminMenu").hide();
+			}
+			
+		} ]);
+
 vanavaniControllers.controller('photoTreeCtrl', [ '$scope', '$routeParams',
 		function($scope, $routeParams) {
 		} ]);
@@ -57,8 +81,7 @@ vanavaniControllers.controller('homeCtrl', [ '$scope', function($scope) {
 		$("#circle2").addClass("circleActive");
 		$("#circle3").addClass("circleActive");
 		$("#circle4").addClass("circleActive");
-		$("#circle5").addClass("circleActive");		
-		
+		$("#circle5").addClass("circleActive");				
 	});
 } ]);
 

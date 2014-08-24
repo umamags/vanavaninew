@@ -23,3 +23,11 @@ vanavaniServices.factory('GridData', ['$resource',
        query: {method:'GET', isArray:true}
      });
    }]);
+
+vanavaniServices.factory('UserService', [function() {
+	var sdo = {
+		isLogged: false,
+		username: ''
+	};
+	return sdo;
+}]);
