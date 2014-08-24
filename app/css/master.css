@@ -182,6 +182,9 @@ img#student_with_books {
 #studentsGrid {
 	width: 100%;
 }
+#khanAcademyGrid {
+	width: 100%;
+}
 /* Modals */
 .ng-modal-overlay {
   /* A dark translucent div that covers the whole screen */

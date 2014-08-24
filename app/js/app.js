@@ -42,6 +42,7 @@ vanavaniApp.config(['$routeProvider',
 	  $routeProvider.when('/admin/studentDetails', {templateUrl: 'partials/admin/admin.html', controller: 'adminCtrl'});
 	  $routeProvider.when('/admin/studentDetails2', {templateUrl: 'partials/admin/admin.html', controller: 'adminCtrl'});
 	  $routeProvider.when('/studentsList', {templateUrl: 'partials/student/studentList.html', controller: 'studentsCtrl'});
+	  $routeProvider.when('/khanAcademyList', {templateUrl: 'partials/admin/khanAcademyList.html', controller: 'khanAcademyCtrl'});
 	  $routeProvider.otherwise({redirectTo: '/home'});
   }]);
 
