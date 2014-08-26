@@ -18,6 +18,7 @@ if ($username == 'admin' && $password != 'vanavani') {
 }
 if ($username == 'admin' && $password == 'vanavani') {
 	$loggedin = 'true';
+	setcookie("username", $username,  time() + (10 * 365 * 24 * 60 * 60));
 }
 
 $data = array(

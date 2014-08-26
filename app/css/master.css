@@ -1,7 +1,7 @@
 body {
 	margin-left: 30px;
 	width: 95%;
-	background: #F2F3F4;
+	background: #FFF9CC;
 	border: 1px solid #E5E5E5;
 	font-family: Arial, Helvetica, Sans-serif;
 }
@@ -20,7 +20,7 @@ img {
 	cursor: pointer;
 }
 #header {
-	background: #F2F3F4;
+	background: #FFF9CC;
 }
 .headerLogo {
 	margin-left: 10px;
@@ -232,4 +232,18 @@ img#student_with_books {
 }
 .error {
 	color: red;
+}
+#panel-login > .panel-heading {
+	background: #AF002A;
+	color: #F2F3F4;
+}
+#panel-newsletter > .panel-heading {
+	background: #CF6210;
+	color: #EFDECD;
+}
+#panel-feeStructure {
+	
+}
+#panel-location {
+	
 }
