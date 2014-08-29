@@ -1,0 +1,1 @@
+http://forum.jquery.com/topic/addin-resizable-to-twitter-bootstrap-panels

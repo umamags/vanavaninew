@@ -37,9 +37,37 @@ vanavaniControllers.controller('photoDetailCtrl', [ '$scope', '$routeParams',
 			$scope.imageName = name;
 		} ]);
 
-vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService',
-		function($scope, $http, User) {
+vanavaniControllers.factory('ReadCookie', function() {
+	return {
+		// returns itemId
+		read : function(cookieName) {
+			var cookies = {};
+		    var c = document.cookie.split('; ');
+
+		    for(var i=c.length-1; i>=0; i--){
+		       var C = c[i].split('=');
+		       cookies[C[0]] = C[1];
+		    }
+
+		    return cookies[name];
+		}
+	};
+});
+
+vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService', 'ReadCookie',
+		function($scope, $http, User, ReadCookie) {
 			$scope.User = User;
+			readCookie($scope);
+			
+			function readCookie($scope) {
+				var url = "php/ReadCookie.php?action=read";
+                $http.get(url).success(function (response) {		
+                    User.password = "";
+                    User.isLogged = response[0].loggedin;
+                    User.username = response[0].username;
+                    $scope.User = User;
+                });            								
+			}
 			
 			$scope.login = function() {
 				var url = "php/LoginService.php?username=" + $scope.User.username + "&password=" + $scope.User.password;
@@ -59,6 +87,13 @@ vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService',
 			}
 			
 			$scope.logout = function() {				
+				var url = "php/ReadCookie.php?action=delete";
+                $http.get(url).success(function (response) {		
+                    User.password = "";
+                    User.isLogged = response[0].loggedin;
+                    User.username = response[0].username;
+                    $scope.User = User;
+                });            								
 				User.isLogged = "false";
 				User.username = "";
 				User.password = "";

@@ -1,0 +1,30 @@
+http://siddii.github.io/angular-timer/
+
+How to use setTimeout
+
+var bar;
+
+//a function named foo
+function foo(){
+   alert('foo');
+}
+
+//bar references function foo
+bar = foo;
+
+//you can:
+
+//1. pass the name of the function
+setTimeout(foo,1000);
+
+//2. pass a variable that references to a function
+setTimeout(bar,1000);
+
+//3.or pass in an anonymous function
+setTimeout(function(){
+  //where we can also call foo
+  foo();
+},1000);
+
+setInterval() - executes a function, over and over again, at specified time intervals
+setTimeout() - executes a function, once, after waiting a specified number of milliseconds
