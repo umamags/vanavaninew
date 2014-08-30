@@ -1,11 +1,24 @@
 <div class="main_content">
 You are here: Home > Students List
-<hr>
-	<input type="text" ng-model="filterOptions.filterText" />
-	<span>Type priya OR weaver to search. You can use the arrow on the grid to do column level searches like newspaper:yes</span>
-	<div id="studentsGrid" class="gridStyle" ng-grid="gridOptions">
+	<hr>
+	<div class="row">
+		<div class="col-md-12">
+			<input type="text" ng-model="filterOptions.filterText" />			
+		</div>	
 	</div>
-	<modal-dialog show='modalShown' width='550' height='440'>
-		<img ng-src="{{modalDialogImage}}" />
-	</modal-dialog>
+	<div class="row"">
+		<div class="col-md-6">
+			<div id="studentsGrid" class="gridStyle" ng-grid="gridOptions">
+			</div>
+		</div>			
+		<div class="col-md-3">
+			<img src="{{studentImage}}" />
+		</div>
+		<div class="col-md-3">
+			Name : {{StudentName}} <br>
+			TV : {{TV}} <br>
+			Newspaper : {{newspaper}} <br>
+			Vehicle : {{vehicle}}
+		</div>		
+	</div>
 </div>

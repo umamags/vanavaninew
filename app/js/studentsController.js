@@ -4,96 +4,103 @@
 var vanavaniControllers = angular.module('vanavaniControllers');
 
 vanavaniControllers.controller('studentsCtrl', 
-        function($scope, $location, $http) {
-		
-		$scope.toggleModal = function(imageName) {
-			var name = imageName;
-			name = name.replace("_medium.jpg", "");
-			name = name.replace("_medium.JPG", "");
-		    $scope.modalDialogImage = "images/students/" + name;
-			
-		    $scope.modalShown = !$scope.modalShown;
-		};
-
-		$scope.filterOptions = {
-        	        filterText: "",
-        	        useExternalFilter: false
-        	    }; 
-          $scope.totalServerItems = 0;
-          $scope.pagingOptions = {
-              pageSizes: [10, 250, 500, 1000],
-              pageSize: 10,
-              currentPage: 1
-          };	    
-          $scope.setPagingData = function(data, page, pageSize){
-        	  $scope.myData = data;
-              if (!$scope.$$phase) {
-                  $scope.$apply();
-              }
-          };
-          $scope.getPagedDataAsync = function (pageSize, page, searchText) {
-              setTimeout(function () {
-                  var data;
-                  var url = 'jsondata/studentsDetails.json';
-                  
-                  if (searchText) {
-                      var ft = searchText.toLowerCase();
-                      $http.get(url).success(function (largeLoad) {		
-                          data = largeLoad.filter(function(item) {
-                              return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
-                          });
-                          $scope.setPagingData(data,page,pageSize);
-                      });            
-                  } else {
-                      $http.get(url).success(function (largeLoad) {
-                          $scope.setPagingData(largeLoad,page,pageSize);
-                      });
-                  }
-              }, 100);
-          };
-          $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
-          $scope.$watch('pagingOptions', function (newVal, oldVal) {
-              if (newVal !== oldVal && newVal.currentPage !== oldVal.currentPage) {
-                $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
-              }
-          }, true);
-          $scope.$watch('filterOptions', function (newVal, oldVal) {
-              if (newVal !== oldVal) {
-                $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
-              }
-          }, true);
-          $scope.gridOptions = {
-        	        data: 'myData',
-        	        enablePaging: false,
-        			showFooter: true,
-        	        totalServerItems: 'totalServerItems',
-        	        filterOptions: $scope.filterOptions,
-        	        showFilter: true,
-        	        enableColumnResize: true,
-        	        enableColumnReordering: true,
-        	        showColumnMenu: true,
-        	        showGroupPanel: true,
-        	        rowHeight: 90,
-        	        columnDefs: [
-     	        	            {field: "StudentName", width: 200},
-     	        	            {field: "PhotoFileName", width: 200, 
-     	        	            	cellTemplate: '<div><button ng-click="toggleModal(row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></button></div>'},
-     	        	            {field: "Class", width: 50},
-     	        	            {field: "FatherOccupation", width: 120},     	        	            
-     	        	            {field: "siblings", width: 100},
-     	        	            {field: "TV", width: 100},
-     	        	            {field: "newspaper", width: 100},
-     	        	            {field: "Internet", width: 100},
-     	        	            {field: "vehicle", width: 100},
-     	        	            {field: "Readinghabit", width: 100},
-     	        	            {field: "TVProgramName", width: 150},
-     	        	            {field: "FatherName", width: 125, visible: false},
-     	        	            {field: "MotherName", width: 125, visible: false},
-     	        	            {field: "MotherOccupation", width: 100, visible: false},
-     	        	            {field: "VacationActivity", width:125, visible: false}
-     	        	        ]
-        	    };
-          
+        function($scope, $location, $http) {		
+			$scope.rowHeight = 90;
+	
+			$scope.filterOptions = {
+	        	        filterText: "",
+	        	        useExternalFilter: false
+	        	    }; 
+	          $scope.totalServerItems = 0;
+	          $scope.pagingOptions = {
+	              pageSizes: [10, 250, 500, 1000],
+	              pageSize: 10,
+	              currentPage: 1
+	          };	    
+	          $scope.setPagingData = function(data, page, pageSize){
+	        	  $scope.myData = data;
+	        	  $scope.pageHeight = $scope.rowHeight * data.length;
+	              if (!$scope.$$phase) {
+	                  $scope.$apply();
+	              }
+	          };
+	          $scope.getPagedDataAsync = function (pageSize, page, searchText) {
+	              setTimeout(function () {
+	                  var data;
+	                  var url = 'jsondata/studentsDetails.json';
+	                  
+	                  if (searchText) {
+	                      var ft = searchText.toLowerCase();
+	                      $http.get(url).success(function (largeLoad) {		
+	                          data = largeLoad.filter(function(item) {
+	                              return JSON.stringify(item).toLowerCase().indexOf(ft) != -1;
+	                          });
+	                          $scope.setPagingData(data,page,pageSize);
+	                      });            
+	                  } else {
+	                      $http.get(url).success(function (largeLoad) {
+	                          $scope.setPagingData(largeLoad,page,pageSize);
+	                      });
+	                  }
+	              }, 100);
+	          };
+	          $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
+	          $scope.$watch('pagingOptions', function (newVal, oldVal) {
+	              if (newVal !== oldVal && newVal.currentPage !== oldVal.currentPage) {
+	                $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
+	              }
+	          }, true);
+	          $scope.$watch('filterOptions', function (newVal, oldVal) {
+	              if (newVal !== oldVal) {
+	                $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
+	              }
+	          }, true);
+	          $scope.getImage = function(row, col, imageName) {
+	  			var name = imageName;
+	  			console.log(col);
+				name = name.replace("_medium.jpg", "");
+				name = name.replace("_medium.JPG", "");
+				$scope.studentImage = "images/students/" + name;
+				
+				$scope.StudentName = row.getProperty("StudentName");
+				$scope.TV = row.getProperty("TV");
+				$scope.newspaper = row.getProperty("newspaper");
+				$scope.vehicle = row.getProperty("vehicle");
+				
+				
+	          }
+	          $scope.gridOptions = {
+	        	        data: 'myData',
+	        	        enablePaging: false,
+	        			showFooter: true,
+	        	        totalServerItems: 'totalServerItems',
+	        	        filterOptions: $scope.filterOptions,
+	        	        showFilter: true,
+	        	        enableColumnResize: true,
+	        	        enableColumnReordering: true,
+	        	        showColumnMenu: true,
+	        	        showGroupPanel: true,
+	        	        multiSelect: false,
+	        	        rowHeight: $scope.rowHeight,
+	        	        columnDefs: [
+	     	        	            {field: "StudentName", width: "25%"},
+	     	        	            {field: "PhotoFileName", width: "25%", 
+	     	        	            	cellTemplate: '<div ng-click="getImage(row, col, row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'},
+	     	        	            {field: "Class", width: "10%"},
+	     	        	            {field: "FatherOccupation", width: "40%"},     	        	            
+	     	        	            {field: "siblings", width: 100, visible: false},
+	     	        	            {field: "TV", width: 100, visible: false},
+	     	        	            {field: "newspaper", width: 100, visible: false},
+	     	        	            {field: "Internet", width: 100, visible: false},
+	     	        	            {field: "vehicle", width: 100, visible: false},
+	     	        	            {field: "Readinghabit", width: 100, visible: false},
+	     	        	            {field: "TVProgramName", width: 150, visible: false},
+	     	        	            {field: "FatherName", width: 125, visible: false},
+	     	        	            {field: "MotherName", width: 125, visible: false},
+	     	        	            {field: "MotherOccupation", width: 100, visible: false},
+	     	        	            {field: "VacationActivity", width:125, visible: false}
+	     	        	        ]
+	        	    };          
         });
 
 vanavaniControllers.controller('khanAcademyCtrl', 

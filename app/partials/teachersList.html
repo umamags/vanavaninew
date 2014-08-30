@@ -17,13 +17,14 @@
 				<div class="col-md-1">{{teacher.sno}}</div>
 				<div class="col-md-2">{{teacher.name}}</div>
 				<div class="col-md-3">
-					<button ng-click='toggleModal(teacher.img)'>
-						<img ng-src="{{teacher.img}}" />
-					</button>
+					<a href="#/photoDetail/{{teacher.img}}"><img ng-src="{{teacher.img}}" /></a>
 				</div>
 				<div class="col-md-2">
-					{{teacher.designation}} <br> {{teacher.classes}}
+					{{teacher.designation}}
 				</div>
+				<div class="col-md-2">
+					 {{teacher.classes}}
+				</div>	 
 				<div class="col-md-2">{{teacher.subject}}</div>
 				<div class="col-md-2">{{teacher.doj}}</div>
 			</div>
