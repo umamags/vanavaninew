@@ -66,6 +66,9 @@ vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService', 
                     User.isLogged = response[0].loggedin;
                     User.username = response[0].username;
                     $scope.User = User;
+                    if (User.isLogged) {
+                    	$("#adminMenu").show();
+                    }
                 });            								
 			}
 			
@@ -103,9 +106,13 @@ vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService', 
 			
 		} ]);
 
-vanavaniControllers.controller('photoTreeCtrl', [ '$scope', '$routeParams',
+vanavaniControllers.controller('teachersSectionCtrl', [ '$scope', '$routeParams',
 		function($scope, $routeParams) {
 		} ]);
+
+vanavaniControllers.controller('photoTreeCtrl', [ '$scope', '$routeParams',
+                                          		function($scope, $routeParams) {
+                                          		} ]);
 
 vanavaniControllers.controller('mentorsCtrl', [ '$scope', '$routeParams',
 		function($scope, $routeParams) {
