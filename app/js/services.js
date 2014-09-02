@@ -24,7 +24,7 @@ vanavaniServices.factory('GridData', ['$resource',
      });
    }]);
 
-vanavaniServices.factory('UserService', [function() {
+vanavaniServices.factory('User', [function() {
 	var sdo = {
 		isLogged: false,
 		username: ''

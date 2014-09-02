@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-var vanavaniControllers = angular.module('vanavaniControllers', ['vanavaniServices']);
+var vanavaniControllers = angular.module('vanavaniControllers', []);
 
 vanavaniControllers.controller('teachersListCtrl', [ '$scope', 'Teacher',
 		function($scope, Teacher) {
@@ -37,41 +37,12 @@ vanavaniControllers.controller('photoDetailCtrl', [ '$scope', '$routeParams',
 			$scope.imageName = name;
 		} ]);
 
-vanavaniControllers.factory('ReadCookie', function() {
-	return {
-		// returns itemId
-		read : function(cookieName) {
-			var cookies = {};
-		    var c = document.cookie.split('; ');
-
-		    for(var i=c.length-1; i>=0; i--){
-		       var C = c[i].split('=');
-		       cookies[C[0]] = C[1];
-		    }
-
-		    return cookies[name];
-		}
-	};
-});
-
-vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService', 'ReadCookie',
-		function($scope, $http, User, ReadCookie) {
+vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'User',
+		function($scope, $http, User) {
 			$scope.User = User;
-			readCookie($scope);
-			
-			function readCookie($scope) {
-				var url = "php/ReadCookie.php?action=read";
-                $http.get(url).success(function (response) {		
-                    User.password = "";
-                    User.isLogged = response[0].loggedin;
-                    User.username = response[0].username;
-                    $scope.User = User;
-                    if (User.isLogged) {
-                    	$("#adminMenu").show();
-                    }
-                });            								
-			}
-			
+            if (User.isLogged) {
+            	$("#adminMenu").show();
+            }
 			$scope.login = function() {
 				var url = "php/LoginService.php?username=" + $scope.User.username + "&password=" + $scope.User.password;
                 $http.get(url).success(function (response) {		
@@ -106,8 +77,12 @@ vanavaniControllers.controller('loginCtrl', [ '$scope', '$http', 'UserService', 
 			
 		} ]);
 
-vanavaniControllers.controller('teachersSectionCtrl', [ '$scope', '$routeParams',
-		function($scope, $routeParams) {
+vanavaniControllers.controller('teachersSectionCtrl', [ '$scope', '$routeParams', 'User',
+		function($scope, $routeParams, User) {
+			console.log(User);
+		    if (User.isLogged) {
+		    	$("#adminMenu").show();
+		    }			
 		} ]);
 
 vanavaniControllers.controller('photoTreeCtrl', [ '$scope', '$routeParams',
