@@ -13,10 +13,10 @@ if (isset($_REQUEST["password"]))
 if ($username != 'admin') {
 	$error = "Please check username";
 }
-if ($username == 'admin' && $password != 'v@navan!') {
+if ($username == 'admin' && $password != 'Salem98!') {
 	$error = "Please check password";
 }
-if ($username == 'admin' && $password == 'v@navan!') {
+if ($username == 'admin' && $password == 'Salem98!') {
 	$loggedin = 'true';
 	setcookie("username", $username,  time() + (10 * 365 * 24 * 60 * 60));
 }
