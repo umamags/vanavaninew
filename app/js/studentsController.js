@@ -66,9 +66,8 @@ vanavaniControllers.controller('studentsCtrl',
 				$scope.TV = row.getProperty("TV");
 				$scope.newspaper = row.getProperty("newspaper");
 				$scope.vehicle = row.getProperty("vehicle");
-				
-				
 	          }
+	          
 	          $scope.gridOptions = {
 	        	        data: 'myData',
 	        	        enablePaging: false,
@@ -83,22 +82,22 @@ vanavaniControllers.controller('studentsCtrl',
 	        	        multiSelect: false,
 	        	        rowHeight: $scope.rowHeight,
 	        	        columnDefs: [
-	     	        	            {field: "StudentName", width: "25%"},
-	     	        	            {field: "PhotoFileName", width: "25%", 
+	     	        	            {field: "StudentName", width: "10%"},
+	     	        	            {field: "PhotoFileName", width: "10%", 
 	     	        	            	cellTemplate: '<div ng-click="getImage(row, col, row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'},
 	     	        	            {field: "Class", width: "10%"},
-	     	        	            {field: "FatherOccupation", width: "40%"},     	        	            
-	     	        	            {field: "siblings", width: 100, visible: false},
-	     	        	            {field: "TV", width: 100, visible: false},
-	     	        	            {field: "newspaper", width: 100, visible: false},
-	     	        	            {field: "Internet", width: 100, visible: false},
-	     	        	            {field: "vehicle", width: 100, visible: false},
-	     	        	            {field: "Readinghabit", width: 100, visible: false},
-	     	        	            {field: "TVProgramName", width: 150, visible: false},
-	     	        	            {field: "FatherName", width: 125, visible: false},
-	     	        	            {field: "MotherName", width: 125, visible: false},
-	     	        	            {field: "MotherOccupation", width: 100, visible: false},
-	     	        	            {field: "VacationActivity", width:125, visible: false}
+	     	        	            {field: "FatherOccupation", width: "10%"},     	        	            
+	     	        	            {field: "siblings", width: "10%"},
+	     	        	            {field: "TV", width: "10%", visible: false},
+	     	        	            {field: "newspaper", width: "10%"},
+	     	        	            {field: "Internet", width: "10%"},
+	     	        	            {field: "vehicle", width: "10%"},
+	     	        	            {field: "Readinghabit", width: "10%"},
+	     	        	            {field: "TVProgramName", width: "10%", visible: false},
+	     	        	            {field: "FatherName", width: "10%", visible: false},
+	     	        	            {field: "MotherName", width: "10%", visible: false},
+	     	        	            {field: "MotherOccupation", width: "10%", visible: false},
+	     	        	            {field: "VacationActivity", width:"10%", visible: false}
 	     	        	        ]
 	        	    };          
         });
