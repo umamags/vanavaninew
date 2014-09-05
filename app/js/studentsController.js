@@ -27,7 +27,7 @@ vanavaniControllers.controller('studentsCtrl',
 	          $scope.getPagedDataAsync = function (pageSize, page, searchText) {
 	              setTimeout(function () {
 	                  var data;
-	                  var url = 'jsondata/studentsDetails.json';
+	                  var url = 'jsondata/studentsDetails3.json';
 	                  
 	                  if (searchText) {
 	                      var ft = searchText.toLowerCase();
@@ -57,7 +57,6 @@ vanavaniControllers.controller('studentsCtrl',
 	          }, true);
 	          $scope.getImage = function(row, col, imageName) {
 	  			var name = imageName;
-	  			console.log(col);
 				name = name.replace("_medium.jpg", "");
 				name = name.replace("_medium.JPG", "");
 				$scope.studentImage = "images/students/" + name;
@@ -82,22 +81,23 @@ vanavaniControllers.controller('studentsCtrl',
 	        	        multiSelect: false,
 	        	        rowHeight: $scope.rowHeight,
 	        	        columnDefs: [
-	     	        	            {field: "StudentName", width: "10%"},
-	     	        	            {field: "PhotoFileName", width: "10%", 
-	     	        	            	cellTemplate: '<div ng-click="getImage(row, col, row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'},
-	     	        	            {field: "Class", width: "10%"},
-	     	        	            {field: "FatherOccupation", width: "10%"},     	        	            
-	     	        	            {field: "siblings", width: "10%"},
-	     	        	            {field: "TV", width: "10%", visible: false},
-	     	        	            {field: "newspaper", width: "10%"},
-	     	        	            {field: "Internet", width: "10%"},
-	     	        	            {field: "vehicle", width: "10%"},
-	     	        	            {field: "Readinghabit", width: "10%"},
-	     	        	            {field: "TVProgramName", width: "10%", visible: false},
-	     	        	            {field: "FatherName", width: "10%", visible: false},
-	     	        	            {field: "MotherName", width: "10%", visible: false},
-	     	        	            {field: "MotherOccupation", width: "10%", visible: false},
-	     	        	            {field: "VacationActivity", width:"10%", visible: false}
+	     	        	            {field: "StudentName", width: "100"},
+	     	        	            {field: "PhotoFileName", width: "100",
+	     	        	            	cellTemplate: '<div ng-click="getImage(row, col, row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'
+	     	        	            },
+	     	        	            {field: "Class", width: "100"},
+	     	        	            {field: "Address", width: "300"},
+	     	        	            {field: "FatherOccupation", width: "100"},     	        	            
+	     	        	            {field: "siblings", width: "100"},
+	     	        	            {field: "newspaper", width: "100"},
+	     	        	            {field: "Internet", width: "100"},
+	     	        	            {field: "vehicle", width: "100"},
+	     	        	            {field: "Readinghabit", width: "100"},
+	     	        	            {field: "TVProgramName", width: "100", visible: false},
+	     	        	            {field: "FatherName", width: "100", visible: false},
+	     	        	            {field: "MotherName", width: "100", visible: false},
+	     	        	            {field: "MotherOccupation", width: "100", visible: false},
+	     	        	            {field: "VacationActivity", width:"100", visible: false}
 	     	        	        ]
 	        	    };          
         });
