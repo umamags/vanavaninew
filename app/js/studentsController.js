@@ -55,18 +55,16 @@ vanavaniControllers.controller('studentsCtrl',
 	                $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
 	              }
 	          }, true);
-	          $scope.getImage = function(row, col, imageName) {
-	  			var name = imageName;
+			  
+	          $scope.modalShown = false;
+			  $scope.toggleModal = function(imageName) {
+				var name = 'images/students/' + imageName;
 				name = name.replace("_medium.jpg", "");
 				name = name.replace("_medium.JPG", "");
-				$scope.studentImage = "images/students/" + name;
+			    $scope.modalDialogImage = name;
 				
-				$scope.StudentName = row.getProperty("StudentName");
-				$scope.TV = row.getProperty("TV");
-				$scope.newspaper = row.getProperty("newspaper");
-				$scope.vehicle = row.getProperty("vehicle");
-	          }
-	          
+			    $scope.modalShown = !$scope.modalShown;
+			  };
 	          $scope.gridOptions = {
 	        	        data: 'myData',
 	        	        enablePaging: false,
@@ -83,7 +81,7 @@ vanavaniControllers.controller('studentsCtrl',
 	        	        columnDefs: [
 	     	        	            {field: "StudentName", width: "150"},
 	     	        	            {field: "PhotoFileName", width: "100",
-	     	        	            	cellTemplate: '<div ng-click="getImage(row, col, row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'
+	     	        	            	cellTemplate: '<div ng-click="toggleModal(row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'
 	     	        	            },
 	     	        	            {field: "Class", width: "100"},
 	     	        	            {field: "Sex", width: "50"},
