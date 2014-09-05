@@ -231,6 +231,9 @@ img#student_with_books {
 .nowrap {
 	white-space: nowrap;
 }
+.wrap {
+	word-wrap: break-word;
+}
 .error {
 	color: red;
 }
