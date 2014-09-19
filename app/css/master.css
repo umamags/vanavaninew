@@ -205,7 +205,7 @@ img#student_with_books {
 
   /* Center the dialog */
   top: 100px;
-  left: 300px;
+  left: 200px;
   transform: translate(0%, 0%);
   -webkit-transform: translate(0%, 0%);
   -moz-transform: translate(0%, 0%);

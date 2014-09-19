@@ -5,7 +5,8 @@ vanavaniControllers.directive('modalDialog', function() {
 	return {
 	    restrict: 'E',
 	    scope: {
-	      show: '='
+	      show: '=',
+	      studentDto: '='
 	    },
 	    replace: true, // Replace with the template below
 	    templateUrl : 'partials/modalDialog.html',

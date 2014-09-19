@@ -4,7 +4,7 @@
 var vanavaniControllers = angular.module('vanavaniControllers');
 
 vanavaniControllers.controller('studentsCtrl', 
-        function($scope, $location, $http) {		
+        function($scope, $location, $http, StudentDTO, StudentDtoREST) {		
 			$scope.rowHeight = 90;
 	
 			$scope.filterOptions = {
@@ -57,14 +57,37 @@ vanavaniControllers.controller('studentsCtrl',
 	          }, true);
 			  
 	          $scope.modalShown = false;
-			  $scope.toggleModal = function(imageName) {
-				var name = 'images/students/' + imageName;
+			  $scope.toggleModal = function(row) {
+				$scope.studentDto = StudentDTO.create();
+				
+				//Get the RegNo and look for the student detail json
+				//If found, read content and populate text box.
+                $scope.studentDto.regNo = row.entity.RegNo;
+                $scope.studentDto.studentName = row.entity.StudentName;
+				var url = 'jsondata/students/' + row.entity.RegNo + ".json";
+				$http.get(url).success(function (data) {	
+                         var studentDetail = data[0];
+                         $scope.studentDto.studentComments = studentDetail.studentComments;
+                     });
+				
+				var name = 'images/students/' + row.entity.PhotoFileName;
 				name = name.replace("_medium.jpg", "");
 				name = name.replace("_medium.JPG", "");
 			    $scope.modalDialogImage = name;
 				
 			    $scope.modalShown = !$scope.modalShown;
 			  };
+			  
+			  $scope.saveStudentDetail = function() {
+				  $scope.modalShown = !$scope.modalShown;
+				  var myResp = StudentDtoREST.updateStudentComments({},$scope.studentDto);
+			  };
+			  
+			  $scope.cancelStudentDetail = function() {
+				  $scope.modalShown = !$scope.modalShown;
+			  };
+			  
+			  
 	          $scope.gridOptions = {
 	        	        data: 'myData',
 	        	        enablePaging: false,
@@ -81,7 +104,7 @@ vanavaniControllers.controller('studentsCtrl',
 	        	        columnDefs: [
 	     	        	            {field: "StudentName", width: "150"},
 	     	        	            {field: "PhotoFileName", width: "100",
-	     	        	            	cellTemplate: '<div ng-click="toggleModal(row.getProperty(col.field))"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'
+	     	        	            	cellTemplate: '<div ng-click="toggleModal(row)"><img src="images/students/{{row.getProperty(col.field)}}" /></div>'
 	     	        	            },
 	     	        	            {field: "Class", width: "100"},
 	     	        	            {field: "Sex", width: "50"},
@@ -172,4 +195,32 @@ vanavaniControllers.controller('khanAcademyCtrl',
         	    };
           
         });
+
+vanavaniControllers.factory('StudentDTO',
+		function() {
+			return {
+				// augments existing Schedule with convenience methods
+				create : function() {
+					var studentDto = {
+					};
+					return studentDto;
+				}
+			};
+		});
+
+vanavaniControllers.factory('StudentDtoREST',
+		function($resource) {
+			return $resource('php/updateStudentComments.php', {
+				regNo : "regNo"
+			}, {
+				//Used for both deactivate and activate
+				updateStudentComments : {
+					method : 'POST',
+					headers : {
+						'Accept' : 'application/json'
+					},
+					isArray : true
+				}
+			});
+		});
 

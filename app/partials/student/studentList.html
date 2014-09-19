@@ -1,7 +1,32 @@
 <div class="main_content">
 You are here: Home > Students List
-	<modal-dialog show='modalShown' width='550' height='340'>
-		<img ng-src="{{modalDialogImage}}" />
+	<modal-dialog show='modalShown' student-dto="studentDto" width='1000' height='440'>
+		<div class="row">
+			<div class="col-md-6">
+				<img class="modelDialogImage" ng-src="{{modalDialogImage}}" />
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-2">
+						<input type="button" class="form-control" ng-click="saveStudentDetail()" value="Save" />
+					</div>
+					<div class="col-md-2">
+						<input type="button" class="form-control" ng-click="cancelStudentDetail()" value="Cancel" />
+					</div>
+					<div class="col-md-3">	
+						<label>{{studentDto.regNo}}</label>
+					</div>
+					<div class="col-md-5">
+						<label>{{studentDto.studentName}}</label>
+					</div>	
+				</div>	
+				<div class="row">
+					<div class="col-md-12">
+						<textarea rows="17" class="form-control" name="studentComments" ng-model="studentDto.studentComments" />
+					</div>			
+				</div>
+			</div>
+		</div>
 	</modal-dialog>
 	<div class="row">
 		<div class="col-md-12">
