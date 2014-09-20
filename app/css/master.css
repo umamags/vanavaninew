@@ -245,3 +245,6 @@ img#student_with_books {
 	background: #CF6210;
 	color: #EFDECD;
 }
+.studentList > .row {
+	padding: 5px;
+}

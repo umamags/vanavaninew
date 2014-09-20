@@ -30,6 +30,21 @@ vanavaniControllers.controller('studentsCtrl',
 	                  var url = 'jsondata/studentsDetails.json';
 	                  
 	                  if (searchText) {
+	                	  if (searchText.className) {
+	                		  var ft = searchText.className;
+		                      $http.get(url).success(function (largeLoad) {		
+		                    	  if (ft == '9_10') {
+		                    		  var data_9 = _.where(largeLoad, {Class: '9'});
+		                    		  var data_10 = _.where(largeLoad, {Class: '10'});
+		                    		  data = _.union(data_9, data_10);
+		                    	  } else {
+		                    		  data = _.where(largeLoad, {Class: ft});
+		                    	  }
+		                          $scope.setPagingData(data,page,pageSize);
+		                      });            
+	                		  return;
+	                	  } 
+	                	  //Here we can see how it goes
 	                      var ft = searchText.toLowerCase();
 	                      $http.get(url).success(function (largeLoad) {		
 	                          data = largeLoad.filter(function(item) {
@@ -44,7 +59,9 @@ vanavaniControllers.controller('studentsCtrl',
 	                  }
 	              }, 100);
 	          };
-	          $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage);
+	          var defaultSearch = {"className":"LKG"};
+	          $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, defaultSearch);
+	          
 	          $scope.$watch('pagingOptions', function (newVal, oldVal) {
 	              if (newVal !== oldVal && newVal.currentPage !== oldVal.currentPage) {
 	                $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, $scope.filterOptions.filterText);
@@ -56,6 +73,14 @@ vanavaniControllers.controller('studentsCtrl',
 	              }
 	          }, true);
 			  
+	          $scope.selectClass = function(whichClass) {
+	        	  var search = {"className":whichClass};
+	        	  if (whichClass == "ALL") {
+	        		  search = null;
+	        	  }
+	        	  $scope.getPagedDataAsync($scope.pagingOptions.pageSize, $scope.pagingOptions.currentPage, search);
+	          }
+	          
 	          $scope.modalShown = false;
 			  $scope.toggleModal = function(row) {
 				$scope.studentDto = StudentDTO.create();
