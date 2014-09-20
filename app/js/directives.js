@@ -3,7 +3,7 @@ var vanavaniControllers = angular.module('vanavaniControllers');
 /* Directives */
 vanavaniControllers.directive('modalDialog', function() {
 	return {
-	    restrict: 'E',
+	    restrict: 'AE',
 	    scope: {
 	      show: '=',
 	      studentDto: '='
@@ -12,7 +12,11 @@ vanavaniControllers.directive('modalDialog', function() {
 	    templateUrl : 'partials/modalDialog.html',
 	    transclude: true, // we want to insert custom content inside the directive
 	    link: function(scope, element, attrs) {
-	      scope.dialogStyle = {};
+	      scope.hideModal = function() {
+		        scope.show = false;
+		      };
+	      
+		  scope.dialogStyle = {};
 	      if (attrs.width)
 	        scope.dialogStyle.width = attrs.width;
 	      if (attrs.height)
