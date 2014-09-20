@@ -4,7 +4,11 @@
 var vanavaniControllers = angular.module('vanavaniControllers');
 
 vanavaniControllers.controller('studentsCtrl', 
-        function($scope, $location, $http, StudentDTO, StudentDtoREST) {		
+        function($scope, $location, $http, User, StudentDTO, StudentDtoREST) {		
+		    if (! User.isLogged) {
+		    	return;
+		    }
+
 			$scope.rowHeight = 90;
 	
 			$scope.filterOptions = {
@@ -154,7 +158,10 @@ vanavaniControllers.controller('studentsCtrl',
         });
 
 vanavaniControllers.controller('khanAcademyCtrl', 
-        function($scope, $location, $http) {
+        function($scope, $location, $http, User) {
+	    if (! User.isLogged) {
+	    	return;
+	    }
 		$scope.filterOptions = {
         	        filterText: "",
         	        useExternalFilter: true
