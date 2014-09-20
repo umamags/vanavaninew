@@ -112,7 +112,9 @@ vanavaniControllers.controller('studentsCtrl',
 				  $scope.modalShown = !$scope.modalShown;
 			  };
 			  
-			  
+			  $scope.hideModal = function() {
+				  $scope.modalShown = !$scope.modalShown;
+			  }
 	          $scope.gridOptions = {
 	        	        data: 'myData',
 	        	        enablePaging: false,
