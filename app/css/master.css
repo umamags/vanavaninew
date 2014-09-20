@@ -248,3 +248,9 @@ img#student_with_books {
 .studentList > .row {
 	padding: 5px;
 }
+.classButtons > .col-md-1 {
+	width: 7%;
+}
+input.filterText {
+	width: 100%;
+}
