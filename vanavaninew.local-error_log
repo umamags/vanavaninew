@@ -1,0 +1,16 @@
+[Mon Sep 08 18:43:35 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/favicon.ico
+[Mon Sep 08 18:44:12 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/{{studentImage}}, referer: http://mahesh.local/
+[Mon Sep 08 18:44:12 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/students/{{row.getProperty(col.field)}}, referer: http://mahesh.local/
+[Mon Sep 08 18:44:13 2014] [error] [client 127.0.0.1] Directory index forbidden by Options directive: /Users/maheshnatarajan/git/vanavaninew/app/images/students/, referer: http://mahesh.local/
+[Mon Sep 08 18:48:04 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/students/{{row.getProperty(col.field)}}, referer: http://mahesh.local/
+[Mon Sep 08 18:48:06 2014] [error] [client 127.0.0.1] Directory index forbidden by Options directive: /Users/maheshnatarajan/git/vanavaninew/app/images/students/, referer: http://mahesh.local/
+[Sun Oct 05 14:10:23 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/favicon.ico
+[Sun Oct 05 14:10:53 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/students/{{row.getProperty(col.field)}}, referer: http://mahesh.local/
+[Sun Oct 05 14:17:26 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/students/{{row.getProperty(col.field)}}, referer: http://mahesh.local/
+[Sun Oct 05 14:18:25 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/favicon.ico, referer: http://mahesh.local/
+[Sun Oct 05 14:19:11 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/students/{{row.getProperty(col.field)}}, referer: http://mahesh.local/
+[Sun Oct 05 14:19:41 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/students/{{row.getProperty(col.field)}}, referer: http://mahesh.local/
+[Sun Oct 05 14:19:43 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/jsondata/students/DSC0107.json, referer: http://mahesh.local/
+[Sun Oct 05 14:20:05 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/jsondata/students/DSC0110.json, referer: http://mahesh.local/
+[Sun Oct 05 16:31:10 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/teachers/savitha.jpg_medium.jpg, referer: http://mahesh.local/
+[Sun Oct 05 16:34:38 2014] [error] [client 127.0.0.1] File does not exist: /Users/maheshnatarajan/git/vanavaninew/app/images/teachers/savitha.jpg_medium.jpg, referer: http://mahesh.local/
