@@ -113,6 +113,7 @@ vanavaniControllers.controller('studentsCtrl',
 			  };
 			  
 			  $scope.cancelStudentDetail = function() {
+				  $scope.modalDialogImage = null;
 				  $scope.modalShown = !$scope.modalShown;
 			  };
 			  
@@ -247,7 +248,6 @@ vanavaniControllers.factory('StudentDtoREST',
 			return $resource('php/updateStudentComments.php', {
 				regNo : "regNo"
 			}, {
-				//Used for both deactivate and activate
 				updateStudentComments : {
 					method : 'POST',
 					headers : {

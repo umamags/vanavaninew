@@ -64,4 +64,3 @@ vanavaniApp.config(['$routeProvider',
         });            								
     }
 });
-
