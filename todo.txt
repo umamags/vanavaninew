@@ -1,5 +1,5 @@
 ToDo
-1. Make student grid
+1. Make student grid. well again
 
 Completed
 1. Make sure you can install the new version in production.
