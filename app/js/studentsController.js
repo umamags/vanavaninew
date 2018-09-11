@@ -5,10 +5,6 @@ var vanavaniControllers = angular.module('vanavaniControllers');
 
 vanavaniControllers.controller('studentsCtrl', 
         function($scope, $location, $http, User, StudentDTO, StudentDtoREST) {		
-		    if (! User.isLogged) {
-		    	return;
-		    }
-
 			$scope.rowHeight = 90;
 	
 			$scope.filterOptions = {
