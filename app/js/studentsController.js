@@ -31,7 +31,7 @@ vanavaniControllers.controller('studentsCtrl',
 	          $scope.getPagedDataAsync = function (pageSize, page, searchText) {
 	              setTimeout(function () {
 	                  var data;
-	                  var url = 'jsondata/studentsDetails.json';
+	                  var url = 'jsondata/studentsDetails2.json';
 	                  
 	                  if (searchText) {
 	                	  if (searchText.className) {
